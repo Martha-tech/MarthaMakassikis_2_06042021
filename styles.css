@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);
+}
+
+body {
+    font-family: "Raleway", serif;
+    font-size: 25px;
+}
+
+header, .search, .accommodation_popular, .activites {
+    width: 80%;
+    margin: auto;
+}
+
+header img {
+    display: flex;
+    width: 200px;
+    height: 80px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+}
+
+nav li {
+    padding-left:100px;
+}
+
+nav a {
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.filtres ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.sinscrire {
+    color:#0065FC;
+    font-weight: bold;
+}
+
+nav a:hover
+{
+    color:#0065FC; 
+    border-bottom: 3px solid ;
+}
+
+nav a.active-item
+{
+   /* color:#0065FC;
+    border-bottom: 3px solid ; */
+    padding-top:20px;
+    border-top:3px solid #0065FC;
+}
+
+.search {
+
+}
+.accommodation {
+    background-color: #F2F2F2; 
+    padding: 20px;
+    margin: 50px;
+    border-radius: 30px;
+}
+
+.hotels_hebergement {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+aside div.hotels_hebergement {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular {
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accommodation_popular {
+    display: flex;
+}
+.activites {
+
+}
+
+.hotel_titre {
+    font-weight: bold;
+}
+
+footer{
+    display: flex;
+    background-color: #F2F2F2;
+    justify-content: flex-start;
+    padding-left: 3%;
+}
+
+footer div{
+    margin-right: auto;
+}
+
+footer div ul {
+    list-style-type: none;
+}
+
+footer div ul li.titre_footer{
+    font-weight: bold;
+    line-height: 2.8;
+}
+
+footer div ul li{
+    line-height: 1.8;
+}
+
+footer div ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer div ul li a:hover {
+    border-bottom: 1px solid ;
+}
+
+
+div.hotel_image {
+    border-radius: 30px;
+}
+
+div.hotel a {
+    text-decoration: none;
+}
+
+div.hotel:hover {
+    border: 10px solid #ccc;
+    border-radius: 30px;
+}
+  
+div.hotel_image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+  
+div.hotel_description {
+    padding: 15px;
+    line-height: 1.8;
+}
+  
+/** {
+    box-sizing: border-box;
+}*/
+  
+.hotel {
+    /*padding: 0 6px;*/
+    width: 24.99999%;
+    border: 10px solid white;  
+    border-radius: 30px;
+    background-color: white;
+    margin: auto;
+    /*width: 30%;*/
+}
+  
+@media only screen and (max-width: 700px) {
+    .hotel {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .hotel {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
