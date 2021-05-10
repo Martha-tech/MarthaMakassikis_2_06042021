@@ -8,7 +8,7 @@ body {
     font-size: 15px;
 }
 
-header, .search, .accomodation_popular, .activities, footer{
+header, .search, .accomodation_popular, .activities, footer {
     width: 80%;
     margin: auto;
 }
@@ -45,35 +45,50 @@ nav a {
     text-decoration: none;
 }
 
+.fa-star {
+    color: #0065FC;
+}
+
 .search_button {
     display: flex;
-    border: 1px;
-    border-radius: 50px;
-    margin: auto;
-    padding: 5px;
-} /*n'arrondit pas les angles*/ /*trouver comment coller les 2 rectangles*/ 
+    height: 40px;
+} /*trouver comment coller les rectangles*/ 
 
-.fa fa-map-marker {
+.search_button input[type="type_search"] {
+    border: 1px solid #F2F2F2;
+    height: 15px;
+    padding: 10px;
+} 
+.search_button input[value="Marseille, France"] {
+    font-weight: bold;
+}
+
+.search_button button[type="btn_search"] {
+    border: 1px solid #0065FC;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.search_button button[type="btn_search"]:hover {
+    cursor: pointer;
+}
+.search_button button[type="btn_search"] a {
+    text-decoration: none;
+    color: white;
+}
+
+.fa-map-marker {
     color: black;
-    border: 1px;
-    border-radius: 50px;
-    background-color: #F2F2F2;
-} /*bordure inactive*/
-
-.filtres ul {
-    display: flex;
-    align-items:flex-start;
-    align-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    list-style-type: none;
-} /*n'arrive pas à mettre titre "filtres" et les filtres sur la même ligne */
-
-.filtres ul li {
-    border: 1px solid lightgray;
-    border-radius: 50px;
-    margin: auto;
-    padding: 0px 0.5px;
+    border: 1px solid #DEEBFF ;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius:15px;
+    background-color: #DEEBFF;
+    height:15px;
+    padding: 10px;
 }
 
 .btn {
@@ -82,8 +97,50 @@ nav a {
     border-radius: 50px;
     background-color: #DEEBFF;
     padding: 10px 14px;
-    cursor: pointer;
 }
+
+.filter a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.filters {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.filters span {
+    display: flex;
+    margin-right: 30px;
+}
+
+.filter_buttons {
+    display: flex;
+}
+
+.filter {
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 0px 14px 0px 0px;
+}
+
+.search_info span {
+    padding-right: 10px;
+}
+
+.fa-info {
+    color: #0065FC;
+    border: 1px solid #DEEBFF;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    text-align: center;
+} /*taille du "i" = grande et en gras*/
 
 .sinscrire {
     color:#0065FC;
@@ -92,7 +149,7 @@ nav a {
 
 nav li a:hover {
     color:#0065FC; 
-    border-top: 3px solid ;
+    border-top: 3px solid;
     padding-top: 18px;
 }
 
@@ -109,7 +166,7 @@ nav li a:hover {
     border-radius: 30px;
 }
 
-.hotels_hebergement {
+.cartes1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -117,26 +174,29 @@ nav li a:hover {
     align-items: flex-start;
 }
 
+.cartes2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartes2 .hotel {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
 .popular {
     margin: 5px;
     padding: 3px;
     background-color: #F2F2F2;
-    width:40%;
+    width: 40%;
     border-radius: 30px;
     display: flex;
 }
 
-.popular .hotels_hebergement {
+.popular h2, .popular .fa-chart-line {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.popular .hotels_hebergement .hotel {
-    display: flex;
-    width: 70px;
-    margin: auto;
 }
 
 .activities {
@@ -145,40 +205,41 @@ nav li a:hover {
     background-color:#F2F2F2;
 }
 
-.activities .hotels_hebergement {
+.activities .cartes1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.activities .hotels_hebergement .two_hotels {
+.activities .cartes1 .two_hotels {
     display: flex;
     flex-direction: column;
     background-color: blue;
 }
 
-div.hotel_image {
+.image1, .image3, .image4, .image6 {
     border-radius: 30px;
 }
 
-div.hotel a {
+.hotel a {
+    color: black;
     text-decoration: none;
 }
 
-div.hotel:hover {
-    border: 10px solid #ccc;
+.hotel:hover {
+    border: 7px solid #ccc;
     border-radius: 30px;
 }
   
-div.hotel_image img {
+.image1, .image3, .image4, .image5, .image6 {
     width: 100%;
     height: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
   
-div.hotel_description {
+.hotel_description {
     padding: 15px;
     line-height: 1.8;
 }
