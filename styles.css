@@ -5,11 +5,12 @@
 
 body {
     font-family: "Raleway", serif;
-    font-size: 15px;
+    font-size: 13px;
+    margin: 8px 0;
 }
 
 header, .search, .accomodation_popular, .activities, footer {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -87,7 +88,7 @@ nav a {
     border-top-left-radius: 15px;
     border-bottom-left-radius:15px;
     background-color: #DEEBFF;
-    height:15px;
+    height: 15px;
     padding: 10px;
 }
 
@@ -155,112 +156,161 @@ nav li a:hover {
 
 .accomodation_popular {
     display: flex;
-    padding: 5px 10px 5px 10px;
 }
 
 .accomodation {
-    margin: 10px;
-    padding: 5px;
+    margin: 0 10px 0 0;
+    padding: 10px 18px;
     background-color: #F2F2F2;
-    width: 60%;
-    border-radius: 30px;
+    width: 70%;
+    border-radius: 15px;
 }
 
-.cartes1 {
+.popular {
+    margin: 0 0 0 10px;
+    padding: 10px 18px;
+    background-color: #F2F2F2;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.popular_intro {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.cards1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    align-content: space-around;
 }
 
-.cartes2 {
+.cards2 {
     display: flex;
     flex-direction: column;
 }
 
-.cartes2 .hotel {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
+.accomodation .cards1 .element {
+    width: 29%;
+    margin: 0 5px 15px 5px;
+    height: 170px;
+}/*pour les images 1, 2, 3 et 5 - ajouter un height, overflow et margin pour réajuster le bas de l'image*/
+
+.accomodation .cards1 .element_image1 {
+    width: 100%;
+    height: 58%;
+    overflow: hidden;
+    margin: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
-.popular {
-    margin: 5px;
-    padding: 3px;
-    background-color: #F2F2F2;
+.accomodation .cards1 .element_image1 .cropped {
+    width: 100%;
+    margin: -21px 0 0 0px;
+}
+
+.cards1 .element .element_image1 .image_mer {
+    margin: -50px 0px 0px 0px;
+} /* pour l'image hôtel de la mer*/
+
+.cards1 .element .element_image1 .image_amina {
+    margin: -110px 0px 0px 0px;
+}
+
+.cards2 .element {
+    display: flex;
+    margin: 0 5px 15px 5px;
+}
+
+.cards2 .element .element_image {
     width: 40%;
-    border-radius: 30px;
-    display: flex;
-}
-
-.popular h2, .popular .fa-chart-line {
-    display: flex;
 }
 
 .activities {
-    width: 80%;
+    width: 90%;
     margin: auto;
-    background-color:#F2F2F2;
+    padding: 10px 0px;
 }
 
-.activities .cartes1 {
+.activities .cards1 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
 }
 
-.activities .cartes1 .two_hotels {
+.activities .cards1 .element {
+    width: 20%;
+}
+
+.activities .cards1 .two_elements_in_column {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: #DEEBFF;
 }
 
-.image1, .image3, .image4, .image6 {
-    border-radius: 30px;
+.activities .cards1 .two_elements_in_column .element {
+    width: 100%;
 }
 
-.hotel a {
+.image1, .image3, .image4, .image5, .image6 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+
+.image2 {
+    border-top-left-radius:15px;
+    border-bottom-left-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+
+
+.element a {
     color: black;
     text-decoration: none;
 }
 
-.hotel:hover {
-    border: 7px solid #ccc;
-    border-radius: 30px;
-}
-  
-.image1, .image3, .image4, .image5, .image6 {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-  
-.hotel_description {
-    padding: 15px;
-    line-height: 1.8;
-}
-  
-.hotel {
-    width: 25%;
-    border: 10px solid white;  
-    border-radius: 30px;
-    background-color: white;
-    margin: auto;
+.cards2 a {
+    color: black;
+    text-decoration: none;
 }
 
-.two_hotels {
-    /*.hotel1:nth-of-type(2);
-    .hotel2:nth-of-type(3);*/
+.element:hover {
+    border: 3px solid #ccc;
+    border-radius: 18px;
+    color: black;
+}
+
+.element_description {
+    padding: 0 0 0 5px;
+    line-height: 1.8;
+}
+
+.element_description p {
+    margin:0;
+}
+  
+.element {
+    border: 3px solid white;  
+    border-radius: 15px;
+    background-color: white;
+}
+
+.two_elements_in_column {
+    /*.element1:nth-of-type(2);
+    .element2:nth-of-type(3);*/
     display: flex;
     flex-direction: column;
     width: 25%;
 }
 
-.hotel_titre {
+.title {
     font-weight: bold;
 }
 
@@ -281,7 +331,7 @@ footer div ul {
     list-style-type: none;
 }
 
-footer div ul li.titre_footer {
+footer div ul li.footer_title {
     font-weight: bold;
     line-height: 2.8;
 }
