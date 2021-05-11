@@ -221,19 +221,42 @@ nav li a:hover {
 
 .cards1 .element .element_image1 .image_mer {
     margin: -50px 0px 0px 0px;
-} /* pour l'image hôtel de la mer*/
+} /* pour l'image Hôtel de la mer*/
 
 .cards1 .element .element_image1 .image_amina {
     margin: -110px 0px 0px 0px;
-}
+} /* pour l'image Hôtel Amina*/
 
 .cards2 .element {
     display: flex;
     margin: 0 5px 15px 5px;
+    height: 110px;
+    width: 90%
 }
 
-.cards2 .element .element_image {
+.cards2 .element .element_description {
+    width: 60%;
+    height: 100%;
+}
+
+.cards2 .element .element_image2 {
     width: 40%;
+    height: 100%;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cards2 .element .element_image2 .cropped {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 151%;
+    margin: 0 0 0 -30px;
+}
+
+.cards2 .element .element_image2 .bleu_blanc {
+    width: 110%;
+    margin: -55px 0 0 -9px;
 }
 
 .activities {
