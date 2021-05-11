@@ -100,12 +100,6 @@ nav a {
     padding: 10px 14px;
 }
 
-.filter a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-}
-
 .filters {
     display: flex;
     align-items: baseline;
@@ -126,6 +120,17 @@ nav a {
     border-radius: 50px;
     margin: 10px;
     padding: 0px 14px 0px 0px;
+    transition: transform 0.1s;
+}
+
+.filter:hover {
+    transform: scale(1.05);
+}
+
+.filter a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .search_info span {
