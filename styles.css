@@ -301,25 +301,32 @@ nav li a:hover {
     margin: -55px 0 0 -9px;
 } /*Hôtel Tout bleu et blanc*/
 
-.activities .element_description {
-    padding: 0 0 0 8px;
-    line-height: 3;
+.accomodation .element_description, .popular .element_description {
+    line-height: 1;
+    padding: 0 0 0 10px;
 }
 
+.activities .element_description {
+    line-height: 3;
+    padding: 0 0 0 10px;
+} /*à revoir*/
+ 
 .element_description p {
-    margin: 0;
+    padding: 0 0 0 10px;
+} /*à revoir*/
+
+.title {
+    font-weight: bold;
 }
-  
 
 /*Section "Activités"*/
 
 /*style commun*/
-
 .activities {
     width: 90%;
     height: 480px;
     margin: auto;
-    padding: 10px 0px;
+    padding: 10px 18px;
 }
 
 .activities .cards1 {
@@ -330,7 +337,7 @@ nav li a:hover {
     width: 20%;
     /*height: 300px;*/
     border-radius: 15px;
-    border: 3px solid white;
+    /*border: 3px solid white;*/
 }
 
 .activities .cards1 .element .element_description {
@@ -432,7 +439,6 @@ nav li a:hover {
 }
 
 .element:hover {
-    border: 3px solid white;
     border-radius: 18px;
     color: black;
     text-decoration: none; /*reste actif*/
