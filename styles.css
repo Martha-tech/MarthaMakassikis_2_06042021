@@ -1,3 +1,4 @@
+/*Police de caractère*/
 @font_face {
     font-family: "Raleway";
     src: url ("raleway/Raleway-Regular.ttf");
@@ -9,26 +10,29 @@ body {
     margin: 8px 0;
 }
 
+
+/*Dimensions des principales sections de la page*/
 header, .search, .accomodation_popular, .activities, footer {
     width: 90%;
     margin: auto;
+}
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 header img {
     display: flex;
     width: 100px;
     height: 40px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-}
+} /*logo*/
 
 nav {
     display: flex;
     justify-content: flex-end;
-}
+} /*barre de navigation*/
 
 nav ul {
     display: flex;
@@ -46,8 +50,29 @@ nav a {
     text-decoration: none;
 }
 
-.fa-star {
-    color: #0065FC;
+.sinscrire {
+    color:#0065FC;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color:#0065FC; 
+    border-top: 3px solid;
+    padding-top: 18px;
+}
+
+/*Section "search"*/
+
+/*rubrique recherche*/
+.fa-map-marker {
+    color: black;
+    border: 1px solid #DEEBFF ;
+    /*border-collapse: collapse;*/
+    border-top-left-radius: 15px;
+    border-bottom-left-radius:15px;
+    background-color: #DEEBFF;
+    height: 15px;
+    padding: 10px;
 }
 
 .search_button {
@@ -57,6 +82,7 @@ nav a {
 
 .search_button input[type="type_search"] {
     border: 1px solid #F2F2F2;
+    /*border-collapse: collapse;*/
     height: 15px;
     padding: 10px;
 } 
@@ -66,30 +92,24 @@ nav a {
 
 .search_button button[type="btn_search"] {
     border: 1px solid #0065FC;
+    /*border-collapse: collapse;*/
     background-color: #0065FC;
     color: white;
     font-weight: bold;
     padding: 10px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    transition: transform 0.1s;
 }
 
 .search_button button[type="btn_search"]:hover {
     cursor: pointer;
+    box-shadow: 1px 1px 1px 1px gainsboro;
+    transform: scale(1.01);
 }
 .search_button button[type="btn_search"] a {
     text-decoration: none;
     color: white;
-}
-
-.fa-map-marker {
-    color: black;
-    border: 1px solid #DEEBFF ;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius:15px;
-    background-color: #DEEBFF;
-    height: 15px;
-    padding: 10px;
 }
 
 .btn {
@@ -100,6 +120,7 @@ nav a {
     padding: 10px 14px;
 }
 
+/*rubrique filtres*/
 .filters {
     display: flex;
     align-items: baseline;
@@ -124,7 +145,8 @@ nav a {
 }
 
 .filter:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    box-shadow: 1px 1px 1px 1px gainsboro;
 }
 
 .filter a {
@@ -133,6 +155,8 @@ nav a {
     color: black;
 }
 
+
+/*rubrique info*/
 .search_info span {
     padding-right: 10px;
 }
@@ -148,19 +172,21 @@ nav a {
     text-align: center;
 } /*taille du "i" = grande et en gras*/
 
-.sinscrire {
-    color:#0065FC;
-    font-weight: bold;
-}
 
-nav li a:hover {
-    color:#0065FC; 
-    border-top: 3px solid;
-    padding-top: 18px;
+
+/*Section "accomodation_popular"*/
+.fa-star {
+    color: #0065FC;
 }
 
 .accomodation_popular {
     display: flex;
+}
+
+.accomodation_popular .element {
+    border: 3px solid white;  
+    border-radius: 15px;
+    background-color: white;
 }
 
 .accomodation {
@@ -199,11 +225,27 @@ nav li a:hover {
     flex-direction: column;
 }
 
+.cards1 .element {
+    box-shadow: 1px 1px 1px 1px gainsboro;
+    transition: transform 0.1s;
+}
+.cards1 .element:hover {
+    transform: scale(1.02);
+}
+
+.cards2 .element {
+    box-shadow: 1px 1px 1px 1px gainsboro;
+    transition: transform 0.1s;
+}
+.cards2 .element:hover {
+    transform: scale(1.02);
+}
+
 .accomodation .cards1 .element {
     width: 29%;
     margin: 0 5px 15px 5px;
     height: 170px;
-}/*pour les images 1, 2, 3 et 5 - ajouter un height, overflow et margin pour réajuster le bas de l'image*/
+}
 
 .accomodation .cards1 .element_image1 {
     width: 100%;
@@ -217,21 +259,21 @@ nav li a:hover {
 .accomodation .cards1 .element_image1 .cropped {
     width: 100%;
     margin: -21px 0 0 0px;
-}
+} /*Auberge de la Cannebière, Hôtel du port, Hôtel Les mouettes*/
 
 .cards1 .element .element_image1 .image_mer {
-    margin: -50px 0px 0px 0px;
-} /* pour l'image Hôtel de la mer*/
+    margin: -63px 0px 0px 0px;
+} /*Hôtel de la mer*/
 
 .cards1 .element .element_image1 .image_amina {
-    margin: -110px 0px 0px 0px;
-} /* pour l'image Hôtel Amina*/
+    margin: -131px 0px 0px 0px;
+} /*Hôtel Amina*/
 
 .cards2 .element {
     display: flex;
     margin: 0 5px 15px 5px;
     height: 110px;
-    width: 90%
+    width: 90%;
 }
 
 .cards2 .element .element_description {
@@ -245,61 +287,136 @@ nav li a:hover {
     overflow: hidden;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-}
+} 
 
 .cards2 .element .element_image2 .cropped {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     width: 151%;
     margin: 0 0 0 -30px;
-}
+} /*Hôtel Le soleil du matin, Chambres d'hôtes*/
 
 .cards2 .element .element_image2 .bleu_blanc {
     width: 110%;
     margin: -55px 0 0 -9px;
+} /*Hôtel Tout bleu et blanc*/
+
+.activities .element_description {
+    padding: 0 0 0 8px;
+    line-height: 3;
 }
+
+.element_description p {
+    margin: 0;
+}
+  
+
+/*Section "Activités"*/
+
+/*style commun*/
 
 .activities {
     width: 90%;
+    height: 480px;
     margin: auto;
     padding: 10px 0px;
 }
 
 .activities .cards1 {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .activities .cards1 .element {
     width: 20%;
+    /*height: 300px;*/
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+.activities .cards1 .element .element_description {
+    width: 100%;
+    height: 40px;
 }
 
 .activities .cards1 .two_elements_in_column {
+    width: 20%;
+    /*height: 300px;*/
     display: flex;
     flex-direction: column;
-    background-color: #DEEBFF;
+    align-content: space-around;
+    margin: 0 0px 10px 0px;
 }
-
 .activities .cards1 .two_elements_in_column .element {
     width: 100%;
+    height: 100%;
+}
+.activities .cards1 .two_elements_in_column .element .element_description {
+    width: 100%;
+    /*height: 50px;*/
+    align-content: space-around;
 }
 
-.image1, .image3, .image4, .image5, .image6 {
+.blank {
+    width: 100%;
+    height: 20px;
+}
+
+.activities .cards1 .element_description .p {
+    line-height: 1.8;
+}
+
+.element_image3, .element_image4, .element_image5, .element_image6 {
+    width: 100%;
+    overflow: hidden;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    width: 100%;
-    height: auto;
-}
-
-.image2 {
-    border-top-left-radius:15px;
-    border-bottom-left-radius: 15px;
-    width: 100%;
-    height: auto;
 }
 
 
-.element a {
+/*style spécifique aux images de la section "activités"*/
+
+.element_image3 {
+    height: 300px;
+}
+.element_image3 .cropped {
+    width: 200%;
+    height: 120%;
+    overflow: hidden;
+    margin: -14px 0 0 -133px;
+} /*Vieux Port, Parc National des Calanques*/
+
+.element_image4 {
+    height: 140px;
+}
+.element_image4 .cropped {
+    width: 103%;
+    height: 266%;
+    overflow: hidden;
+    margin: -93px 0px 0px -5px;
+} /* Fort de Pomègues*/
+
+.element_image5 {
+    height: 90px;
+}
+.element_image5 .cropped {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 0 0;
+} /*Îles du Frioul*/
+
+.element_image6 {
+    height: 120px;
+}
+.element_image6 .cropped {
+    width: 100%;
+    height: 156%;
+    overflow: hidden;
+    margin: -11px 0 0 0;
+} /* Notre-Dame-de-la-Garde, Parc Longchamp*/ 
+
+
+/*hyperliens et survols*/
+.cards1 a {
     color: black;
     text-decoration: none;
 }
@@ -309,49 +426,30 @@ nav li a:hover {
     text-decoration: none;
 }
 
+.element a {
+    color: black;
+    text-decoration: none; /*reste actif*/
+}
+
 .element:hover {
-    border: 3px solid #ccc;
+    border: 3px solid white;
     border-radius: 18px;
     color: black;
+    text-decoration: none; /*reste actif*/
 }
 
-.element_description {
-    padding: 0 0 0 5px;
-    line-height: 1.8;
-}
+/*Footer*/
 
-.element_description p {
-    margin:0;
-}
-  
-.element {
-    border: 3px solid white;  
-    border-radius: 15px;
-    background-color: white;
-}
-
-.two_elements_in_column {
-    /*.element1:nth-of-type(2);
-    .element2:nth-of-type(3);*/
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-}
-
-.title {
-    font-weight: bold;
-}
-
-footer{
+footer {
     width: 80%;
-    height: 60px;
+    height: 140px;
     display: flex;
     background-color: #F2F2F2;
     justify-content: flex-start;
     padding-left: 3%;
 }
 
-footer div{
+footer div {
     margin-right: auto;
 }
 
@@ -359,12 +457,12 @@ footer div ul {
     list-style-type: none;
 }
 
-footer div ul li.footer_title {
+.footer_title {
     font-weight: bold;
     line-height: 2.8;
 }
 
-footer div ul li{
+footer div ul li {
     line-height: 1.8;
 }
 
@@ -374,25 +472,8 @@ footer div ul li a {
 }
 
 footer div ul li a:hover {
-    border-bottom: 1px solid ;
+    border-bottom: 1px solid;
+    text-shadow: 2px 2px 2px gainsboro;
+    cursor: pointer;
+    text-decoration: none;
 }
-
-  
-/*@media only screen and (max-width: 700px) {
-    .hotel {
-      width: 50%;
-      margin: 6px 0;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .hotel {
-      width: 100%;
-    }
-  }
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }*/
