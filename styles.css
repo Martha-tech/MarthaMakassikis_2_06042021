@@ -78,7 +78,7 @@ nav li a:hover {
 .search_button {
     display: flex;
     height: 40px;
-} /*trouver comment coller les rectangles*/ 
+} /*trouver comment coller les rectangles -> marge à 0*/ 
 
 .search_button input[type="type_search"] {
     border: 1px solid #F2F2F2;
