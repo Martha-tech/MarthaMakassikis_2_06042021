@@ -6,7 +6,7 @@
 
 body {
     font-family: "Raleway", serif;
-    font-size: 13px;
+    font-size: 0.9em;
     margin: 8px 0;
 }
 
@@ -57,8 +57,8 @@ nav a {
 
 nav li a:hover {
     color:#0065FC; 
-    border-top: 3px solid;
-    padding-top: 18px;
+    border-top: 0.2em solid;
+    padding-top: 0.6em;
 }
 
 /*Section "search"*/
@@ -67,36 +67,40 @@ nav li a:hover {
 .fa-map-marker {
     color: black;
     border: 1px solid #DEEBFF ;
-    /*border-collapse: collapse;*/
     border-top-left-radius: 15px;
     border-bottom-left-radius:15px;
     background-color: #DEEBFF;
-    height: 15px;
+    height: 17px;
     padding: 10px;
+    margin: 0;
 }
 
 .search_button {
     display: flex;
     height: 40px;
-} /*trouver comment coller les rectangles -> marge à 0*/ 
+    margin: 0 0 1.5em 0;
+    align-content: flex-start;
+} /*coller les rectangles? marge à 0 ne résout pas le pb*/ 
 
 .search_button input[type="type_search"] {
     border: 1px solid #F2F2F2;
-    /*border-collapse: collapse;*/
-    height: 15px;
+    height: 17px;
     padding: 10px;
+    margin: 0;
 } 
 .search_button input[value="Marseille, France"] {
     font-weight: bold;
+    margin: 0;
+    flex-grow: initial;
 }
 
 .search_button button[type="btn_search"] {
     border: 1px solid #0065FC;
-    /*border-collapse: collapse;*/
     background-color: #0065FC;
     color: white;
     font-weight: bold;
     padding: 10px;
+    margin: 0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: transform 0.1s;
@@ -118,6 +122,7 @@ nav li a:hover {
     border-radius: 50px;
     background-color: #DEEBFF;
     padding: 10px 14px;
+    margin: 0;
 }
 
 /*rubrique filtres*/
@@ -125,6 +130,7 @@ nav li a:hover {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
+    margin: 0 0 0.5em 0;
 }
 
 .filters span {
@@ -157,6 +163,10 @@ nav li a:hover {
 
 
 /*rubrique info*/
+.search_info {
+    margin: 0 0 2em 0;
+}
+
 .search_info span {
     padding-right: 10px;
 }
@@ -301,22 +311,28 @@ nav li a:hover {
     margin: -55px 0 0 -9px;
 } /*Hôtel Tout bleu et blanc*/
 
-.accomodation .element_description, .popular .element_description {
+.accomodation .element_description {
+    line-height: 0.6;
+    margin: 0.5em 0.5em;
+}
+
+.popular .element_description {
     line-height: 1;
-    padding: 0 0 0 10px;
+    margin: 0.5em 0.5em;
 }
 
 .activities .element_description {
-    line-height: 3;
-    padding: 0 0 0 10px;
-} /*à revoir*/
- 
-.element_description p {
-    padding: 0 0 0 10px;
-} /*à revoir*/
+    padding: 0 5px;
+    line-height: 2;
+    margin: 0.5em 0.5em;
+}
 
 .title {
     font-weight: bold;
+}
+
+.afficher_plus {
+    margin: 2em 0 1em 0;
 }
 
 /*Section "Activités"*/
@@ -325,7 +341,7 @@ nav li a:hover {
 .activities {
     width: 90%;
     height: 480px;
-    margin: auto;
+    margin: 1.5em auto auto auto;
     padding: 10px 18px;
 }
 
@@ -356,6 +372,7 @@ nav li a:hover {
 .activities .cards1 .two_elements_in_column .element {
     width: 100%;
     height: 100%;
+    margin: auto auto 1.7em auto;
 }
 .activities .cards1 .two_elements_in_column .element .element_description {
     width: 100%;
@@ -452,7 +469,7 @@ footer {
     display: flex;
     background-color: #F2F2F2;
     justify-content: flex-start;
-    padding-left: 3%;
+    padding: 0 1em 1em 1em;
 }
 
 footer div {
@@ -482,4 +499,121 @@ footer div ul li a:hover {
     text-shadow: 2px 2px 2px gainsboro;
     cursor: pointer;
     text-decoration: none;
+}
+
+
+/*Design adaptatif pour smartphones*/
+@media all and (max-width: 1024px) {
+    header {
+        display: flex;
+        width: auto;
+        margin: auto;
+    }
+
+    nav li {
+        width: auto;
+        margin: 0 0.5em 0 0.5em;
+        display: flex;
+        padding-left: 0px;
+    }
+
+    nav li a {
+        text-decoration: none;
+        padding-bottom: 0.3em;
+        color: black;
+    }
+
+    nav li a:hover {
+        border-top: none;
+        padding-top: 0;
+        border-bottom: 0.2em solid;
+        color: #0065FC;
+    }
+
+    #sinscrire {
+        order: 1;
+    }
+    #hebergements {
+        order: 2;
+    }
+    #activities {
+        order : 3;
+    } /*sélecteur ordre = inactif*/
+
+    .filter_buttons {
+        flex-wrap: wrap;
+    }
+
+    .accomodation_popular {
+        width: auto;
+        flex-direction: column-reverse;
+    }
+
+    .accomodation {
+        width: auto;
+        margin: 1.5em 1.5em;
+    }
+
+    .popular {
+        width: auto;
+        margin: 1.5em 1.5em;
+    }
+    
+    .accomodation .cards1 {
+        width: auto;
+        flex-direction: column;
+    }
+
+    .accomodation .cards1 .element {
+        width: auto;
+        height: auto;
+        margin: 1.5em 1.5em;
+    }
+
+    .popular .cards2 {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .popular .cards2 .element {
+        width: auto;
+        height: auto;
+        margin: 1.5em 1.5em;        
+    }
+
+    .activities {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .activities .cards1 .element {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        margin: 1.5em 1.5em;
+    }
+    .activities .cards1 .two_elements_in_column {
+        width: auto;
+        height: auto;
+        margin: 1.5em 1.5em;
+    }
+    .activities .cards1 .two_elements_in_column .element {
+        width: auto;
+        height: auto;
+        margin: 1.5em 1.5em;
+    }
+    
+    footer {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        margin: 1.5em 1.5em;
+    }
+
+    footer li {
+        flex-direction: column;
+    }
+
 }
