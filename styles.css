@@ -42,7 +42,7 @@ nav ul {
 
 nav li {
     padding-left: 100px;
-}
+} 
 
 nav a {
     font-size: 1em;
@@ -72,27 +72,27 @@ nav li a:hover {
     background-color: #DEEBFF;
     height: 17px;
     padding: 10px;
-    margin: 0;
-}
+    margin: 0px;
+} /*marge à 0 ne résout pas pb rectangles non collés*/
 
 .search_button {
     display: flex;
     height: 40px;
-    margin: 0 0 1.5em 0;
+    margin: 0px 0px 1.5em 0px;
     align-content: flex-start;
-} /*coller les rectangles? marge à 0 ne résout pas le pb*/ 
+} /*marge à 0 ne résout pas pb rectangles non collés*/ 
 
 .search_button input[type="type_search"] {
     border: 1px solid #F2F2F2;
     height: 17px;
     padding: 10px;
-    margin: 0;
-} 
+    margin: 0px;
+} /*marge à 0 ne résout pas pb rectangles non collés*/
+
 .search_button input[value="Marseille, France"] {
     font-weight: bold;
-    margin: 0;
-    flex-grow: initial;
-}
+    margin: 0px;
+} /*marge à 0 ne résout pas pb rectangles non collés*/
 
 .search_button button[type="btn_search"] {
     border: 1px solid #0065FC;
@@ -100,11 +100,11 @@ nav li a:hover {
     color: white;
     font-weight: bold;
     padding: 10px;
-    margin: 0;
+    margin: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: transform 0.1s;
-}
+} /*marge à 0 ne résout pas pb rectangles non collés*/
 
 .search_button button[type="btn_search"]:hover {
     cursor: pointer;
@@ -265,6 +265,11 @@ nav li a:hover {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
+.cropped {
+    min-width: 0;
+    min-height: 0;
+} /*pour empêcher les images de se déformer*/
 
 .accomodation .cards1 .element_image1 .cropped {
     width: 100%;
@@ -503,7 +508,7 @@ footer div ul li a:hover {
 
 
 /*Design adaptatif pour smartphones*/
-@media all and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     header {
         display: flex;
         width: auto;
@@ -599,6 +604,7 @@ footer div ul li a:hover {
         height: auto;
         margin: 1.5em 1.5em;
     }
+
     .activities .cards1 .two_elements_in_column .element {
         width: auto;
         height: auto;
@@ -617,3 +623,45 @@ footer div ul li a:hover {
     }
 
 }
+
+/*Design adaptatif pour tablettes*/
+@media screen and (max-width: 1280) {
+    .accomodation {
+        max-width: 100%;
+        display: flex;
+    }
+
+    .popular {
+        max-width: 100%;
+        display: flex;
+    }
+
+    .accomodation .cards1 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .popular .cards2, .activities .cards1 {
+        display: flex;
+    }
+
+    .accomodation .cards1 .element {
+        max-width: 100%;
+    }
+
+    .accomodation .cards1 .element_image1 {
+        max-width: 100%;
+    }
+
+    .popular .cards2 .element {
+        max-width: 100%;
+    }
+
+    .popular .cards2 .element_image2 {
+        max-width: 100%;
+    }
+
+    .activities .cards1 {
+        display: flex;
+        max-width: 100%;
+    }
