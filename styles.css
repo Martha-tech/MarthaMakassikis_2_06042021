@@ -6,8 +6,8 @@
 
 body {
     font-family: "Raleway", serif;
-    font-size: 0.9em;
-    margin: 8px 0;
+    font-size: 1rem;
+    margin: 1rem 0;
 }
 
 
@@ -15,6 +15,8 @@ body {
 header, .search, .accomodation_popular, .activities, footer {
     width: 90%;
     margin: auto;
+    /*background: grey;*/ /*pour visualiser les boîtes*/
+    /*border : 0.2rem solid black;*/ /*pour visualiser les boîtes*/
 }
 
 /*Header*/
@@ -23,29 +25,35 @@ header {
     justify-content: space-between;
 }
 
-header img {
+.logo {
     display: flex;
-    width: 100px;
-    height: 40px;
-} /*logo*/
+    justify-content: flex-start;
+    width: 5rem;
+    height: 2rem;
+}
 
-nav {
+.navbar {
     display: flex;
     justify-content: flex-end;
-} /*barre de navigation*/
+}
+
+.nav_accomodation_activities {
+    display: flex;
+    justify-content: space-between;
+}
 
 nav ul {
     display: flex;
     list-style-type: none;
-    padding: 0px;
+    margin-top: 1.5rem;
 }
 
 nav li {
-    padding-left: 100px;
+    margin-left: 5rem;
 } 
 
 nav a {
-    font-size: 1em;
+    font-size: 1rem;
     color: black;
     text-decoration: none;
 }
@@ -57,8 +65,8 @@ nav a {
 
 nav li a:hover {
     color:#0065FC; 
-    border-top: 0.2em solid;
-    padding-top: 0.6em;
+    border-top: 0.2rem solid;
+    padding-top: 1.5rem;
 }
 
 /*Section "search"*/
@@ -66,49 +74,44 @@ nav li a:hover {
 /*rubrique recherche*/
 .fa-map-marker {
     color: black;
-    border: 1px solid #DEEBFF ;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius:15px;
+    border: 0.2912rem solid #DEEBFF;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
     background-color: #DEEBFF;
-    height: 17px;
-    padding: 10px;
-    margin: 0px;
-} /*marge à 0 ne résout pas pb rectangles non collés*/
+    height: 1.03rem;
+    padding: 0.4rem;
+}
 
 .search_button {
     display: flex;
-    height: 40px;
-    margin: 0px 0px 1.5em 0px;
+    height: 3rem;
+    margin: 0 0 1.5rem 0;
     align-content: flex-start;
-} /*marge à 0 ne résout pas pb rectangles non collés*/ 
+}
 
 .search_button input[type="type_search"] {
-    border: 1px solid #F2F2F2;
-    height: 17px;
-    padding: 10px;
-    margin: 0px;
-} /*marge à 0 ne résout pas pb rectangles non collés*/
+    border: 0.0018rem solid #F2F2F2;
+    padding: 0.6557rem;
+}
 
 .search_button input[value="Marseille, France"] {
     font-weight: bold;
-    margin: 0px;
-} /*marge à 0 ne résout pas pb rectangles non collés*/
+}
 
 .search_button button[type="btn_search"] {
-    border: 1px solid #0065FC;
+    border: 0.0018rem solid #0065FC;
     background-color: #0065FC;
     color: white;
     font-weight: bold;
-    padding: 10px;
-    margin: 0px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    padding: 0.6557rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
     transition: transform 0.1s;
-} /*marge à 0 ne résout pas pb rectangles non collés*/
+}
 
 .search_button button[type="btn_search"]:hover {
     cursor: pointer;
-    box-shadow: 1px 1px 1px 1px gainsboro;
+    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem gainsboro;
     transform: scale(1.01);
 }
 .search_button button[type="btn_search"] a {
@@ -118,11 +121,10 @@ nav li a:hover {
 
 .btn {
     color: #0065FC;
-    border: 1px;
-    border-radius: 50px;
+    border: 0.063rem;
+    border-radius: 3.125rem;
     background-color: #DEEBFF;
-    padding: 10px 14px;
-    margin: 0;
+    padding: 0.625rem 0.875rem;
 }
 
 /*rubrique filtres*/
@@ -135,7 +137,7 @@ nav li a:hover {
 
 .filters span {
     display: flex;
-    margin-right: 30px;
+    margin-right: 1.875rem;
 }
 
 .filter_buttons {
@@ -143,16 +145,16 @@ nav li a:hover {
 }
 
 .filter {
-    border: 1px solid lightgray;
-    border-radius: 50px;
-    margin: 10px;
-    padding: 0px 14px 0px 0px;
+    border: 0.063rem solid lightgray;
+    border-radius: 3.125rem;
+    margin: 0.625rem;
+    padding: 0 0.875rem 0 0;
     transition: transform 0.1s;
 }
 
 .filter:hover {
     transform: scale(1.02);
-    box-shadow: 1px 1px 1px 1px gainsboro;
+    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem gainsboro;
 }
 
 .filter a {
@@ -168,19 +170,20 @@ nav li a:hover {
 }
 
 .search_info span {
-    padding-right: 10px;
+    padding-right: 0.625rem;
 }
 
 .fa-info {
     color: #0065FC;
-    border: 1px solid #DEEBFF;
-    padding: 5px;
-    margin: 5px 5px 5px 5px;
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
+    border: 0.063rem solid #DEEBFF;
+    padding:  0.313rem;
+    margin: 0.313rem 0.313rem 0.313rem 0.313rem;
+    width: 0.938rem;
+    height: 0.938rem;
+    border-radius: 1.25rem;
     text-align: center;
-} /*taille du "i" = grande et en gras*/
+    font-size: 0.8em;
+}
 
 
 
@@ -194,25 +197,25 @@ nav li a:hover {
 }
 
 .accomodation_popular .element {
-    border: 3px solid white;  
-    border-radius: 15px;
+    border: 0.188rem solid white;  
+    border-radius: 0.938rem;
     background-color: white;
 }
 
 .accomodation {
-    margin: 0 10px 0 0;
-    padding: 10px 18px;
+    margin: 0 0.625rem 0 0;
+    padding: 0.625rem 1.125rem;
     background-color: #F2F2F2;
     width: 70%;
-    border-radius: 15px;
+    border-radius: 0.938rem;
 }
 
 .popular {
-    margin: 0 0 0 10px;
-    padding: 10px 18px;
+    margin: 0 0 0 0.625rem;
+    padding: 0.625rem 1.125rem;
     background-color: #F2F2F2;
     width: 30%;
-    border-radius: 15px;
+    border-radius: 0.938rem;
 }
 
 .popular_intro {
@@ -236,7 +239,7 @@ nav li a:hover {
 }
 
 .cards1 .element {
-    box-shadow: 1px 1px 1px 1px gainsboro;
+    box-shadow: 0.063rem 0.063rem 0.063rem 0.063rem gainsboro;
     transition: transform 0.1s;
 }
 .cards1 .element:hover {
@@ -244,7 +247,7 @@ nav li a:hover {
 }
 
 .cards2 .element {
-    box-shadow: 1px 1px 1px 1px gainsboro;
+    box-shadow: 0.063rem 0.063rem 0.063rem 0.063rem gainsboro;
     transition: transform 0.1s;
 }
 .cards2 .element:hover {
@@ -253,8 +256,8 @@ nav li a:hover {
 
 .accomodation .cards1 .element {
     width: 29%;
-    margin: 0 5px 15px 5px;
-    height: 170px;
+    margin: 0 0.313rem 0.938rem 0.313rem;
+    height: 10.625rem;
 }
 
 .accomodation .cards1 .element_image1 {
@@ -262,32 +265,27 @@ nav li a:hover {
     height: 58%;
     overflow: hidden;
     margin: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 0.938rem;
+    border-top-right-radius: 0.938rem;
 }
-
-.cropped {
-    min-width: 0;
-    min-height: 0;
-} /*pour empêcher les images de se déformer*/
 
 .accomodation .cards1 .element_image1 .cropped {
     width: 100%;
-    margin: -21px 0 0 0px;
+    margin: -1.313rem 0 0 0;
 } /*Auberge de la Cannebière, Hôtel du port, Hôtel Les mouettes*/
 
 .cards1 .element .element_image1 .image_mer {
-    margin: -63px 0px 0px 0px;
+    margin: -3.938rem 0 0 0;
 } /*Hôtel de la mer*/
 
 .cards1 .element .element_image1 .image_amina {
-    margin: -131px 0px 0px 0px;
+    margin: -8.188rem 0 0 0;
 } /*Hôtel Amina*/
 
 .cards2 .element {
     display: flex;
-    margin: 0 5px 15px 5px;
-    height: 110px;
+    margin: 0 0.313rem 0.938rem 0.313rem;
+    height: 6.875rem;
     width: 90%;
 }
 
@@ -300,24 +298,24 @@ nav li a:hover {
     width: 40%;
     height: 100%;
     overflow: hidden;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 0.938rem;
+    border-bottom-left-radius: 0.938rem;
 } 
 
 .cards2 .element .element_image2 .cropped {
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 0.938rem;
+    border-bottom-left-radius: 0.938rem;
     width: 151%;
-    margin: 0 0 0 -30px;
+    margin: 0 0 0 -1.875rem;
 } /*Hôtel Le soleil du matin, Chambres d'hôtes*/
 
 .cards2 .element .element_image2 .bleu_blanc {
     width: 110%;
-    margin: -55px 0 0 -9px;
+    margin: -3.438rem 0 0 -0.563rem;
 } /*Hôtel Tout bleu et blanc*/
 
 .accomodation .element_description {
-    line-height: 0.6;
+    line-height: 0.3;
     margin: 0.5em 0.5em;
 }
 
@@ -327,9 +325,9 @@ nav li a:hover {
 }
 
 .activities .element_description {
-    padding: 0 5px;
+    padding: 0 0.313rem;
     line-height: 2;
-    margin: 0.5em 0.5em;
+    margin: 0.5rem 0.5rem;
 }
 
 .title {
@@ -337,7 +335,7 @@ nav li a:hover {
 }
 
 .afficher_plus {
-    margin: 2em 0 1em 0;
+    margin: 2rem 0 1rem 0;
 }
 
 /*Section "Activités"*/
@@ -345,9 +343,9 @@ nav li a:hover {
 /*style commun*/
 .activities {
     width: 90%;
-    height: 480px;
-    margin: 1.5em auto auto auto;
-    padding: 10px 18px;
+    height: 30rem;
+    margin: 1.5rem auto auto auto;
+    padding: 0;
 }
 
 .activities .cards1 {
@@ -356,38 +354,30 @@ nav li a:hover {
 
 .activities .cards1 .element {
     width: 20%;
-    /*height: 300px;*/
-    border-radius: 15px;
-    /*border: 3px solid white;*/
+    border-radius: 0.938rem;
 }
 
 .activities .cards1 .element .element_description {
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
 }
 
 .activities .cards1 .two_elements_in_column {
     width: 20%;
-    /*height: 300px;*/
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    margin: 0 0px 10px 0px;
+    margin: 0 0 0.625rem 0;
 }
 .activities .cards1 .two_elements_in_column .element {
     width: 100%;
     height: 100%;
     margin: auto auto 1.7em auto;
 }
+
 .activities .cards1 .two_elements_in_column .element .element_description {
     width: 100%;
-    /*height: 50px;*/
     align-content: space-around;
-}
-
-.blank {
-    width: 100%;
-    height: 20px;
 }
 
 .activities .cards1 .element_description .p {
@@ -397,35 +387,35 @@ nav li a:hover {
 .element_image3, .element_image4, .element_image5, .element_image6 {
     width: 100%;
     overflow: hidden;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 0.938rem;
+    border-top-right-radius: 0.938rem;
 }
 
 
 /*style spécifique aux images de la section "activités"*/
 
 .element_image3 {
-    height: 300px;
+    height: 18.75rem;
 }
 .element_image3 .cropped {
     width: 200%;
     height: 120%;
     overflow: hidden;
-    margin: -14px 0 0 -133px;
+    margin: -0.875rem 0 0 -8.313rem;
 } /*Vieux Port, Parc National des Calanques*/
 
 .element_image4 {
-    height: 140px;
+    height: 8.75rem;
 }
 .element_image4 .cropped {
     width: 103%;
     height: 266%;
     overflow: hidden;
-    margin: -93px 0px 0px -5px;
+    margin: -5.813rem 0 0 -0.313rem;
 } /* Fort de Pomègues*/
 
 .element_image5 {
-    height: 90px;
+    height: 5.625rem;
 }
 .element_image5 .cropped {
     width: 100%;
@@ -434,13 +424,13 @@ nav li a:hover {
 } /*Îles du Frioul*/
 
 .element_image6 {
-    height: 120px;
+    height: 7.5rem;
 }
 .element_image6 .cropped {
     width: 100%;
     height: 156%;
     overflow: hidden;
-    margin: -11px 0 0 0;
+    margin: -0.688rem 0 0 0;
 } /* Notre-Dame-de-la-Garde, Parc Longchamp*/ 
 
 
@@ -457,24 +447,24 @@ nav li a:hover {
 
 .element a {
     color: black;
-    text-decoration: none; /*reste actif*/
+    text-decoration: none;
 }
 
 .element:hover {
-    border-radius: 18px;
+    border-radius: 1.125rem;
     color: black;
-    text-decoration: none; /*reste actif*/
+    text-decoration: none;
 }
 
 /*Footer*/
 
 footer {
     width: 80%;
-    height: 140px;
+    height: 8.75rem;
     display: flex;
     background-color: #F2F2F2;
     justify-content: flex-start;
-    padding: 0 1em 1em 1em;
+    padding: 0 6.8rem 1.8rem 1rem;
 }
 
 footer div {
@@ -500,8 +490,8 @@ footer div ul li a {
 }
 
 footer div ul li a:hover {
-    border-bottom: 1px solid;
-    text-shadow: 2px 2px 2px gainsboro;
+    border-bottom: 0.063rem solid;
+    text-shadow: 0.125rem 0.125rem 0.125rem gainsboro;
     cursor: pointer;
     text-decoration: none;
 }
@@ -511,15 +501,13 @@ footer div ul li a:hover {
 @media screen and (max-width: 1024px) {
     header {
         display: flex;
-        width: auto;
-        margin: auto;
     }
 
     nav li {
         width: auto;
         margin: 0 0.5em 0 0.5em;
         display: flex;
-        padding-left: 0px;
+        padding-left: 0;
     }
 
     nav li a {
@@ -535,15 +523,20 @@ footer div ul li a:hover {
         color: #0065FC;
     }
 
-    #sinscrire {
+    .logo, .nav_registration {
+        display: flex;
+    }
+
+    .logo {
         order: 1;
     }
-    #hebergements {
+    .nav_registration {
         order: 2;
     }
-    #activities {
+    .nav_accomodation_activities {
+        display: flex;
         order : 3;
-    } /*sélecteur ordre = inactif*/
+    }
 
     .filter_buttons {
         flex-wrap: wrap;
@@ -625,7 +618,7 @@ footer div ul li a:hover {
 }
 
 /*Design adaptatif pour tablettes*/
-@media screen and (max-width: 1280) {
+/*@media screen and (max-width: 768px) {
     .accomodation {
         max-width: 100%;
         display: flex;
@@ -665,3 +658,4 @@ footer div ul li a:hover {
         display: flex;
         max-width: 100%;
     }
+*/
