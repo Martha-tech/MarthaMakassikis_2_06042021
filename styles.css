@@ -1,22 +1,71 @@
-/*Police de caractère*/
-@font_face {
-    font-family: "Raleway";
-    src: url ("raleway/Raleway-Regular.ttf");
+/*Couleurs, polices, marges, typographie*/
+:root {
+    --clr-primary-400: #deebff;
+    --clr-primary-500: #0065fc;
+    
+    --clr-neutral-200: #f2f2f2;
+    --clr-neutral-300: gainsboro;
+    
+    --clr-neutral-100: #ffffff;
+    --clr-neutral-900: #000000;
+
+    --ff-primary: "Raleway", sans-serif;
+    --ff-icons: "Font Awesome";
+} 
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Raleway", serif;
+    font-family: var(--ff-primary);
+    font-weight: 400; /*normal*/
     font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+body, 
+h2, 
+p {
+    margin: 0;
+}
+
+h2 {
+    color: var(--clr-neutral-900);
+    font-family: var(--ff-primary);
+    font-weight: 700; /*bold*/
+    line-height: 1;
+}
+
+h2, 
+p {
     margin: 1rem 0;
 }
 
+span {
+    line-height: 1;
+}
+
+/*img {
+    overflow: hidden;
+    max-width: 100%;
+}*/ /*règles à revoir*/
+
+header, 
+section {
+    padding: 1rem 0;
+}
 
 /*Dimensions des principales sections de la page*/
-header, .search, .accomodation_popular, .activities, footer {
+header, 
+.search, 
+.accomodation_popular, 
+.activities, 
+footer {
     width: 90%;
     margin: auto;
-    /*background: grey;*/ /*pour visualiser les boîtes*/
-    /*border : 0.2rem solid black;*/ /*pour visualiser les boîtes*/
+    /*background: grey;
+    border : 0.2rem solid black;*/ /*pour visualiser les boîtes*/
 }
 
 /*Header*/
@@ -32,54 +81,60 @@ header {
     height: 2rem;
 }
 
-.navbar {
+nav {
     display: flex;
     justify-content: flex-end;
 }
 
-.nav_accomodation_activities {
-    display: flex;
-    justify-content: space-between;
-}
-
 nav ul {
     display: flex;
+    justify-content: space-between;
     list-style-type: none;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+}
+
+.nav_accomodation_activities,
+.nav_registration {
+    display: flex;
+}
+
+.logo,
+.nav_accomodation_activities,
+.nav_registration {
+    flex-basis: baseline;
 }
 
 nav li {
     margin-left: 5rem;
-} 
+}
 
 nav a {
     font-size: 1rem;
-    color: black;
+    color: var(--clr-neutral-900);
     text-decoration: none;
 }
 
 .sinscrire {
-    color:#0065FC;
-    font-weight: bold;
+    color: var(--clr-primary-500);
+    font-weight: 700;
 }
 
 nav li a:hover {
-    color:#0065FC; 
+    color: var(--clr-primary-500); 
     border-top: 0.2rem solid;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
 /*Section "search"*/
 
 /*rubrique recherche*/
 .fa-map-marker {
-    color: black;
-    border: 0.2912rem solid #DEEBFF;
+    color: var(--clr-neutral-900);
+    border: 0.2912rem solid var(--clr-primary-400);
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
-    background-color: #DEEBFF;
-    height: 1.03rem;
-    padding: 0.4rem;
+    background-color: var(--clr-primary-400);
+    padding: 0.41rem;
 }
 
 .search_button {
@@ -95,13 +150,13 @@ nav li a:hover {
 }
 
 .search_button input[value="Marseille, France"] {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .search_button button[type="btn_search"] {
-    border: 0.0018rem solid #0065FC;
-    background-color: #0065FC;
-    color: white;
+    border: 0.0018rem solid var(--clr-primary-500);
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
     font-weight: bold;
     padding: 0.6557rem;
     border-top-right-radius: 5rem;
@@ -111,19 +166,19 @@ nav li a:hover {
 
 .search_button button[type="btn_search"]:hover {
     cursor: pointer;
-    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem gainsboro;
-    transform: scale(1.01);
+    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--clr-neutral-200);
+    transform: scale(1.03);
 }
 .search_button button[type="btn_search"] a {
     text-decoration: none;
-    color: white;
+    color: var(--clr-neutral-100);
 }
 
 .btn {
-    color: #0065FC;
+    color: var(--clr-primary-500);
     border: 0.063rem;
     border-radius: 3.125rem;
-    background-color: #DEEBFF;
+    background-color: var(--clr-primary-400);
     padding: 0.625rem 0.875rem;
 }
 
@@ -145,7 +200,7 @@ nav li a:hover {
 }
 
 .filter {
-    border: 0.063rem solid lightgray;
+    border: 0.063rem solid var(--clr-neutral-300);
     border-radius: 3.125rem;
     margin: 0.625rem;
     padding: 0 0.875rem 0 0;
@@ -154,13 +209,13 @@ nav li a:hover {
 
 .filter:hover {
     transform: scale(1.02);
-    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem gainsboro;
+    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--clr-neutral-200);
 }
 
 .filter a {
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--clr-neutral-900);
 }
 
 
@@ -174,13 +229,11 @@ nav li a:hover {
 }
 
 .fa-info {
-    color: #0065FC;
-    border: 0.063rem solid #DEEBFF;
-    padding:  0.313rem;
-    margin: 0.313rem 0.313rem 0.313rem 0.313rem;
-    width: 0.938rem;
-    height: 0.938rem;
-    border-radius: 1.25rem;
+    color: var(--clr-primary-500);
+    border: 0.08rem solid var(--clr-primary-400);
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 1rem;
     text-align: center;
     font-size: 0.8em;
 }
@@ -189,7 +242,7 @@ nav li a:hover {
 
 /*Section "accomodation_popular"*/
 .fa-star {
-    color: #0065FC;
+    color: var(--clr-primary-500);
 }
 
 .accomodation_popular {
@@ -197,25 +250,25 @@ nav li a:hover {
 }
 
 .accomodation_popular .element {
-    border: 0.188rem solid white;  
+    border: 0.188rem solid var(--clr-neutral-100);  
     border-radius: 0.938rem;
-    background-color: white;
+    background-color: var(--clr-neutral-100);
+}
+
+.accomodation, 
+.popular {
+    margin: 0 0.625rem 0 0;
+    padding: 0.625rem 1.125rem;
+    background-color: var(--clr-neutral-200);
+    border-radius: 0.938rem;
 }
 
 .accomodation {
-    margin: 0 0.625rem 0 0;
-    padding: 0.625rem 1.125rem;
-    background-color: #F2F2F2;
     width: 70%;
-    border-radius: 0.938rem;
 }
 
 .popular {
-    margin: 0 0 0 0.625rem;
-    padding: 0.625rem 1.125rem;
-    background-color: #F2F2F2;
     width: 30%;
-    border-radius: 0.938rem;
 }
 
 .popular_intro {
@@ -238,32 +291,27 @@ nav li a:hover {
     flex-direction: column;
 }
 
-.cards1 .element {
-    box-shadow: 0.063rem 0.063rem 0.063rem 0.063rem gainsboro;
-    transition: transform 0.1s;
-}
-.cards1 .element:hover {
-    transform: scale(1.02);
-}
-
+.cards1 .element, 
 .cards2 .element {
-    box-shadow: 0.063rem 0.063rem 0.063rem 0.063rem gainsboro;
+    box-shadow: 0.063rem 0.063rem 0.063rem 0.063rem var(--clr-neutral-300);
     transition: transform 0.1s;
 }
+.cards1 .element:hover, 
 .cards2 .element:hover {
     transform: scale(1.02);
 }
 
 .accomodation .cards1 .element {
-    width: 29%;
-    margin: 0 0.313rem 0.938rem 0.313rem;
-    height: 10.625rem;
+    width: 30%;
+    margin: 0 0.313rem 1.938rem 0.313rem;
+    height: 14rem;
 }
 
 .accomodation .cards1 .element_image1 {
     width: 100%;
-    height: 58%;
+    height: 60%;
     overflow: hidden;
+    justify-content: center; /*ajout*/
     margin: 0;
     border-top-left-radius: 0.938rem;
     border-top-right-radius: 0.938rem;
@@ -271,6 +319,7 @@ nav li a:hover {
 
 .accomodation .cards1 .element_image1 .cropped {
     width: 100%;
+    height: auto; /*ajouté*/
     margin: -1.313rem 0 0 0;
 } /*Auberge de la Cannebière, Hôtel du port, Hôtel Les mouettes*/
 
@@ -278,26 +327,31 @@ nav li a:hover {
     margin: -3.938rem 0 0 0;
 } /*Hôtel de la mer*/
 
+.cards1 .element .element_image1 .image_panier {
+    margin: 0 0 0 0;
+} /*Auberge Le Panier*/
+
 .cards1 .element .element_image1 .image_amina {
     margin: -8.188rem 0 0 0;
 } /*Hôtel Amina*/
 
 .cards2 .element {
     display: flex;
-    margin: 0 0.313rem 0.938rem 0.313rem;
-    height: 6.875rem;
-    width: 90%;
+    margin: 0 0.313rem 1.938rem 0.03rem;
+    height: 8.875rem;
+    width: 100%;
 }
 
 .cards2 .element .element_description {
     width: 60%;
-    height: 100%;
+    height: auto; /*changé : 100%-> auto*/
 }
 
 .cards2 .element .element_image2 {
-    width: 40%;
-    height: 100%;
+    width: 60%;
+    height: auto; /*changé : 100%-> auto*/
     overflow: hidden;
+    justify-content: center; /*ajout*/
     border-top-left-radius: 0.938rem;
     border-bottom-left-radius: 0.938rem;
 } 
@@ -305,7 +359,8 @@ nav li a:hover {
 .cards2 .element .element_image2 .cropped {
     border-top-left-radius: 0.938rem;
     border-bottom-left-radius: 0.938rem;
-    width: 151%;
+    width: 150%;
+    height: auto; /*ajouté*/
     margin: 0 0 0 -1.875rem;
 } /*Hôtel Le soleil du matin, Chambres d'hôtes*/
 
@@ -326,23 +381,23 @@ nav li a:hover {
 
 .activities .element_description {
     padding: 0 0.313rem;
-    line-height: 2;
+    line-height: 1.5;
     margin: 0.5rem 0.5rem;
 }
 
 .title {
-    font-weight: bold;
+    font-weight: 700; /*bold*/
 }
 
 .afficher_plus {
-    margin: 2rem 0 1rem 0;
+    margin: 0 0 1rem 0;
 }
 
 /*Section "Activités"*/
 
 /*style commun*/
+
 .activities {
-    width: 90%;
     height: 30rem;
     margin: 1.5rem auto auto auto;
     padding: 0;
@@ -353,7 +408,7 @@ nav li a:hover {
 }
 
 .activities .cards1 .element {
-    width: 20%;
+    width: 25%;
     border-radius: 0.938rem;
 }
 
@@ -371,7 +426,7 @@ nav li a:hover {
 }
 .activities .cards1 .two_elements_in_column .element {
     width: 100%;
-    height: 100%;
+    height: auto; /*changé: 100%-> auto*/
     margin: auto auto 1.7em auto;
 }
 
@@ -398,18 +453,18 @@ nav li a:hover {
     height: 18.75rem;
 }
 .element_image3 .cropped {
-    width: 200%;
-    height: 120%;
+    width: 166%;
+    height: auto;
     overflow: hidden;
     margin: -0.875rem 0 0 -8.313rem;
 } /*Vieux Port, Parc National des Calanques*/
 
 .element_image4 {
-    height: 8.75rem;
+    height: 7.75rem;
 }
 .element_image4 .cropped {
     width: 103%;
-    height: 266%;
+    height: auto;
     overflow: hidden;
     margin: -5.813rem 0 0 -0.313rem;
 } /* Fort de Pomègues*/
@@ -419,48 +474,41 @@ nav li a:hover {
 }
 .element_image5 .cropped {
     width: 100%;
+    height: auto;
     overflow: hidden;
     margin: 0 0 0 0;
 } /*Îles du Frioul*/
 
 .element_image6 {
-    height: 7.5rem;
+    height: 6.7rem;
 }
 .element_image6 .cropped {
     width: 100%;
-    height: 156%;
+    height: auto;
     overflow: hidden;
     margin: -0.688rem 0 0 0;
 } /* Notre-Dame-de-la-Garde, Parc Longchamp*/ 
 
 
 /*hyperliens et survols*/
-.cards1 a {
-    color: black;
-    text-decoration: none;
-}
-
-.cards2 a {
-    color: black;
-    text-decoration: none;
-}
-
+.cards1 a, 
+.cards2 a, 
 .element a {
-    color: black;
+    color: var(--clr-neutral-900);
     text-decoration: none;
 }
 
 .element:hover {
     border-radius: 1.125rem;
-    color: black;
+    color: var(--clr-neutral-900);
     text-decoration: none;
 }
 
 /*Footer*/
 
 footer {
-    width: 80%;
-    height: 8.75rem;
+    width: 90%;
+    height: 10.75rem;
     display: flex;
     background-color: #F2F2F2;
     justify-content: flex-start;
@@ -485,58 +533,95 @@ footer div ul li {
 }
 
 footer div ul li a {
-    color: black;
+    color: var(--clr-neutral-900);
     text-decoration: none;
 }
 
 footer div ul li a:hover {
     border-bottom: 0.063rem solid;
-    text-shadow: 0.125rem 0.125rem 0.125rem gainsboro;
+    text-shadow: 0.125rem 0.125rem 0.125rem var(--clr-neutral-200);
     cursor: pointer;
     text-decoration: none;
 }
 
 
 /*Design adaptatif pour smartphones*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 414px) {
+    body {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    header, 
+    section {
+        padding: 0.5rem 0;
+    }
     header {
         display: flex;
     }
 
     nav li {
         width: auto;
-        margin: 0 0.5em 0 0.5em;
+        margin: 0 0.5em 0 0.5rem;
         display: flex;
-        padding-left: 0;
+        flex-wrap: wrap; /*sans effet*/
+        margin-left: 0;
     }
 
     nav li a {
         text-decoration: none;
-        padding-bottom: 0.3em;
-        color: black;
+        padding-bottom: 0.3rem;
+        color: var(--clr-neutral-900);
     }
 
     nav li a:hover {
         border-top: none;
         padding-top: 0;
-        border-bottom: 0.2em solid;
-        color: #0065FC;
+        border-bottom: 0.2rem solid;
+        color: var(--clr-primary-500);
     }
 
-    .logo, .nav_registration {
+    /*.logo, 
+    .nav_accomodation, 
+    .nav_activities,
+    .nav_registration {
         display: flex;
-    }
+    }*/
 
     .logo {
-        order: 1;
+        margin-right: 10.5rem;
     }
+    
     .nav_registration {
-        order: 2;
+        margin-right: 1rem;
     }
+
+    .logo,
+    .nav_registration {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo,
+    .nav_registration,
     .nav_accomodation_activities {
         display: flex;
-        order : 3;
+        flex-wrap: wrap;
     }
+    
+    .nav_accomodation_activities {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .nav_accomodation_activities:nth-child(1) {
+        order: 2;
+        flex-direction: flex-start;
+    }
+    .nav_registration:nth-child(2) {
+        order : 1;
+        flex-direction: flex-end;
+    }
+
 
     .filter_buttons {
         flex-wrap: wrap;
@@ -549,12 +634,12 @@ footer div ul li a:hover {
 
     .accomodation {
         width: auto;
-        margin: 1.5em 1.5em;
+        margin: 1.5rem 1.5rem;
     }
 
     .popular {
         width: auto;
-        margin: 1.5em 1.5em;
+        margin: 1.5rem 1.5rem;
     }
     
     .accomodation .cards1 {
@@ -565,19 +650,36 @@ footer div ul li a:hover {
     .accomodation .cards1 .element {
         width: auto;
         height: auto;
-        margin: 1.5em 1.5em;
+        margin: 1.5rem 1.5rem;
+    }
+
+    .accomodation .cards1 .element_image1 {
+        width: 18rem;
+        height: auto;
     }
 
     .popular .cards2 {
         width: auto;
         height: auto;
         flex-direction: column;
+        justify-content: center; /*sélecteur inactif*/
     }
 
     .popular .cards2 .element {
-        width: auto;
+        width: 18rem;
         height: auto;
-        margin: 1.5em 1.5em;        
+    }
+
+    .cards1 .element .element_image1 .image_amina {
+        margin: -14.188rem 0 0 0px;
+    }
+
+    .cards1 .element .element_image1 .image_mer {
+        margin: -5.938rem 0 0 0;
+    }
+    
+    #activities {
+        padding: 0 0 0 2rem;
     }
 
     .activities {
@@ -587,75 +689,63 @@ footer div ul li a:hover {
     }
 
     .activities .cards1 .element {
-        width: auto;
+        width: 20rem;
         height: auto;
         flex-direction: column;
-        margin: 1.5em 1.5em;
+        justify-content: center;
+        margin: 1.5rem 1.5rem;
     }
     .activities .cards1 .two_elements_in_column {
-        width: auto;
+        width: 20rem;
         height: auto;
-        margin: 1.5em 1.5em;
+        margin: 0rem 0.5rem;
     }
 
     .activities .cards1 .two_elements_in_column .element {
-        width: auto;
+        width: 100%;
         height: auto;
-        margin: 1.5em 1.5em;
+        justify-content: center;
+        margin-bottom: 1.5rem;
     }
-    
+
+    .element_image3,
+    .element_image4,
+    .element_image5,
+    .element_image6 {
+        height: 9.75rem;
+    }
+
+    .element_image3 .cropped {
+        margin: -5.875rem 0 0 -8.313rem;
+    }
+
+    .element_image4 .cropped {
+        margin: -9.813rem 0 0 -0.313rem;
+    }
+
     footer {
-        width: auto;
+        width: 90%;
         height: auto;
         flex-direction: column;
-        margin: 1.5em 1.5em;
+        margin: 1.5rem 1.5rem;
+        padding: 0.1rem 3.8rem 0.8rem 0;
     }
 
     footer li {
         flex-direction: column;
     }
-
 }
 
 /*Design adaptatif pour tablettes*/
-/*@media screen and (max-width: 768px) {
-    .accomodation {
-        max-width: 100%;
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    header, 
+    section {
+        padding: 0.5rem 0;
+    }
+    header {
         display: flex;
     }
-
-    .popular {
-        max-width: 100%;
-        display: flex;
-    }
-
-    .accomodation .cards1 {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .popular .cards2, .activities .cards1 {
-        display: flex;
-    }
-
-    .accomodation .cards1 .element {
-        max-width: 100%;
-    }
-
-    .accomodation .cards1 .element_image1 {
-        max-width: 100%;
-    }
-
-    .popular .cards2 .element {
-        max-width: 100%;
-    }
-
-    .popular .cards2 .element_image2 {
-        max-width: 100%;
-    }
-
-    .activities .cards1 {
-        display: flex;
-        max-width: 100%;
-    }
-*/
