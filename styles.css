@@ -323,31 +323,31 @@ nav li a:hover {
     margin: -1.313rem 0 0 0;
 } /*Auberge de la Cannebière, Hôtel du port, Hôtel Les mouettes*/
 
-.cards1 .element .element_image1 .image_mer {
+.accomodation .cards1 .element .element_image1 .image_mer {
     margin: -3.938rem 0 0 0;
 } /*Hôtel de la mer*/
 
-.cards1 .element .element_image1 .image_panier {
+.accomodation .cards1 .element .element_image1 .image_panier {
     margin: 0 0 0 0;
 } /*Auberge Le Panier*/
 
-.cards1 .element .element_image1 .image_amina {
+.accomodation .cards1 .element .element_image1 .image_amina {
     margin: -8.188rem 0 0 0;
 } /*Hôtel Amina*/
 
-.cards2 .element {
+.popular .cards2 .element {
     display: flex;
     margin: 0 0.313rem 1.938rem 0.03rem;
     height: 8.875rem;
     width: 100%;
 }
 
-.cards2 .element .element_description {
+.popular .cards2 .element .element_description {
     width: 60%;
     height: auto; /*changé : 100%-> auto*/
 }
 
-.cards2 .element .element_image2 {
+.popular .cards2 .element .element_image2 {
     width: 60%;
     height: auto; /*changé : 100%-> auto*/
     overflow: hidden;
@@ -356,7 +356,7 @@ nav li a:hover {
     border-bottom-left-radius: 0.938rem;
 } 
 
-.cards2 .element .element_image2 .cropped {
+.popular .cards2 .element .element_image2 .cropped {
     border-top-left-radius: 0.938rem;
     border-bottom-left-radius: 0.938rem;
     width: 150%;
@@ -364,7 +364,7 @@ nav li a:hover {
     margin: 0 0 0 -1.875rem;
 } /*Hôtel Le soleil du matin, Chambres d'hôtes*/
 
-.cards2 .element .element_image2 .bleu_blanc {
+.popular .cards2 .element .element_image2 .bleu_blanc {
     width: 110%;
     margin: -3.438rem 0 0 -0.563rem;
 } /*Hôtel Tout bleu et blanc*/
@@ -736,6 +736,8 @@ footer div ul li a:hover {
     }
 }
 
+
+
 /*Design adaptatif pour tablettes*/
 @media screen and (max-width: 768px) {
     body {
@@ -744,8 +746,117 @@ footer div ul li a:hover {
     }
     header, 
     section {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0.5rem;
     }
-    header {
+
+    .filter_buttons {
+        flex-wrap: wrap;
+    }
+
+    .accomodation_popular {
         display: flex;
+        flex-direction: column;
     }
+
+    .accomodation {
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+    .popular {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.5rem;
+    }
+    .popular_intro {
+        width: 100%;
+        padding-right: 5rem;
+    }
+    .popular .cards2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .popular .cards2 .element {
+        width: 95%;
+        height: 14rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular .cards2 .element .element_image2 {
+        width: 100%;
+        height: 48%;
+        overflow: hidden;
+        justify-content: center;
+        margin: 0;
+        border-radius: 0.938rem 0.938rem 0 0;
+    }
+
+    .popular .cards2 .element .element_image2 .cropped {
+        width: 140%;
+        height: auto;
+        margin: -4rem 0 0 -2.875rem;
+    }
+    .popular .cards2 .element .element_image2 .bleu_blanc {
+        width: 125%;
+        height: auto;
+        margin: -9rem 0 0 -1.875rem;
+    }
+
+    .popular .cards2 .element .element_description {
+        width: 100%;
+        height: auto;
+    }
+
+    .accomodation .cards1 .element_image1 {
+        width: 100%;
+        height: 50%;
+    }
+
+    .activities {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .activities .cards1 .element,
+    .activities .cards1 .two_elements_in_column {
+        width: 45%;
+    }
+
+    .activities .cards1 .element:nth-child(1) {
+        order: 1;
+    }
+    .activities .cards1 .two_elements_in_column:nth-child(1){
+        order: 2;
+    }
+    .activities .cards1 .two_elements_in_column:nth-child(2) {
+        order: 3;
+    }
+    .activities .cards1 .element:nth-child(2) {
+        order: 4;
+    } /*changement dans l'ordre des colonnes : inactif*/
+
+    .element_image3 .cropped{
+        margin: -0.875rem 0 0 -6.313rem;
+    }
+
+    .element_image4 .cropped {
+        margin: -9.813rem 0 0 -0.313rem;
+    }
+
+    .element_image5 .cropped {
+        margin: -3rem 0 0 0rem;
+    }
+
+    .element_image6 .cropped {
+        margin: -1.6rem 0 0 0;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+    }
+}
