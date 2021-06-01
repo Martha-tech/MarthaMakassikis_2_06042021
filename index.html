@@ -13,29 +13,27 @@
 
     <body>
         <header>
-            <div class="logo">
-                <a href="index.html"><img src="Reservia.svg" alt="logo Reservia" title="Reservia"/></a>
-            </div>
             <nav>
-                <ul>
-                    <div class="nav_accomodation_activities">
-                        <li class="nav_accomodation"><a class="active-item" href="#hebergements">Hébergements</a></li>
-                        <li class="nav_activities"><a href="#activites">Activités</a></li>
-                    </div>
-                    <div class="nav_registration">
-                        <li><a class="sinscrire" href="#sinscrire">S'inscrire</a></li>
-                    </div>
-                </ul>
+                <div class="logo">
+                    <a href="index.html"><img src="Reservia.svg" alt="logo Reservia" title="Reservia"/></a>
+                </div>
+                <div class="nav_accomodation_activities">
+                    <div class="nav_accomodation"><a class="active-item" href="#hebergements">Hébergements</a></div>
+                    <div class="nav_activities"><a href="#activites">Activités</a></div>
+                </div>
+                <div class="nav_registration">
+                    <div><a class="sinscrire" href="#sinscrire">S'inscrire</a></div>
+                </div>
             </nav>
         </header> 
 
-        <section class="search">
+        <div class="search">
             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
 
             <div class="search_button">
                 <form method="post" action="traitement.php">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i><input type="type_search" value="Marseille, France"><button type="btn_search">Rechercher</button>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><input type="text" value="Marseille, France"><button type="submit">Rechercher</button>
                 </form>
             </div>
 
@@ -44,16 +42,16 @@
                 <span><strong>Filtres</strong></span>
                 <div class="filter_buttons">
                     <div class="filter">
-                        <a href="#"><button class="btn"><i class="fas fa-money-bill-wave-alt"></i></button> <strong>Economique</strong></a>
+                        <button class="btn"><i class="fas fa-money-bill-wave-alt"></i></button> <a href="#"><strong>Economique</strong></a>
                     </div>
                     <div class="filter">
-                        <a href="#"><button class="btn"><i class="fas fa-child"></i></button> <strong>Familial</strong></a>
+                        <button class="btn"><i class="fas fa-child"></i></button><a href="#"><strong>Familial</strong></a>
                     </div>
                     <div class="filter">
-                        <a href="#"><button class="btn"><i class="fas fa-heart"></i></button> <strong>Romantique</strong></a>
+                        <button class="btn"><i class="fas fa-heart"></i></button><a href="#"><strong>Romantique</strong></a>
                     </div>
                     <div class="filter">
-                        <a href="#"><button class="btn"><i class="fas fa-dog"></i></button> <strong>Animaux autorisés</strong></a>
+                        <button class="btn"><i class="fas fa-dog"></i></button><a href="#"><strong>Animaux autorisés</strong></a>
                     </div>
                 </div>
             </div>
@@ -64,10 +62,9 @@
 
         </div>
 
-        </section>
-
-        <section class="accomodation_popular">
-            <section class="accomodation">
+    
+        <div class="accomodation_popular">
+            <div class="accomodation">
                 <h2>Hébergements à Marseille</h2>
                 <div class="cards1">
 
@@ -162,7 +159,7 @@
                 </div>
 
 
-            </section>
+            </div>
 
             <aside class="popular">
                 <div class="popular_intro">
@@ -217,10 +214,10 @@
                 </div>
 
             </aside>
-        </section>
+        </div>
 
         
-        <section class="activities">
+        <div class="activities">
             
             <h2 id="activities">Activités à Marseille</h2>
             <div class="cards1">
@@ -266,7 +263,7 @@
                 <div class="element">
                     <a href="#">
                         <div class="element_image3">
-                            <img class="cropped"src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" title="Parc National des Calanques"/>
+                            <img class="cropped" src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" title="Parc National des Calanques"/>
                         </div>
                         <div class="element_description">
                             <span class="title">Parc National des Calanques</span>
@@ -300,7 +297,7 @@
                 </div>
 
             </div>
-        </section>
+        </div>
             
 
         <footer>

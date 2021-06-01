@@ -20,7 +20,7 @@
 body {
     font-family: var(--ff-primary);
     font-weight: 400; /*normal*/
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.4rem;
 }
 
@@ -69,9 +69,10 @@ footer {
 }
 
 /*Header*/
-header {
+nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -81,31 +82,14 @@ header {
     height: 2rem;
 }
 
-nav {
+.nav_accomodation_activities {
+    margin-left: auto;
     display: flex;
-    justify-content: flex-end;
+    margin-right: 1rem;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin-top: 1rem;
-}
-
-.nav_accomodation_activities,
-.nav_registration {
-    display: flex;
-}
-
-.logo,
-.nav_accomodation_activities,
-.nav_registration {
-    flex-basis: baseline;
-}
-
-nav li {
-    margin-left: 5rem;
+.nav_accomodation {
+    margin-right: 1rem;
 }
 
 nav a {
@@ -144,7 +128,7 @@ nav li a:hover {
     align-content: flex-start;
 }
 
-.search_button input[type="type_search"] {
+.search_button input[type="text"] {
     border: 0.0018rem solid #F2F2F2;
     padding: 0.6557rem;
 }
@@ -153,7 +137,7 @@ nav li a:hover {
     font-weight: 700;
 }
 
-.search_button button[type="btn_search"] {
+.search_button button[type="submit"] {
     border: 0.0018rem solid var(--clr-primary-500);
     background-color: var(--clr-primary-500);
     color: var(--clr-neutral-100);
@@ -164,12 +148,12 @@ nav li a:hover {
     transition: transform 0.1s;
 }
 
-.search_button button[type="btn_search"]:hover {
+.search_button button[type="submit"]:hover {
     cursor: pointer;
     box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--clr-neutral-200);
     transform: scale(1.03);
 }
-.search_button button[type="btn_search"] a {
+.search_button button[type="submit"] a {
     text-decoration: none;
     color: var(--clr-neutral-100);
 }
@@ -307,7 +291,7 @@ nav li a:hover {
     height: 14rem;
 }
 
-.accomodation .cards1 .element_image1 {
+.accomodation .cards1 .element .element_image1 {
     width: 100%;
     height: 60%;
     overflow: hidden;
@@ -317,7 +301,7 @@ nav li a:hover {
     border-top-right-radius: 0.938rem;
 }
 
-.accomodation .cards1 .element_image1 .cropped {
+.accomodation .cards1 .element .element_image1 .cropped {
     width: 100%;
     height: auto; /*ajouté*/
     margin: -1.313rem 0 0 0;
@@ -545,6 +529,7 @@ footer div ul li a:hover {
 }
 
 
+/*------------------------------------------*/
 /*Design adaptatif pour smartphones*/
 @media screen and (max-width: 414px) {
     body {
@@ -555,8 +540,25 @@ footer div ul li a:hover {
     section {
         padding: 0.5rem 0;
     }
+
     header {
         display: flex;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .nav_registration {
+        margin-left: auto;
+        order: 2;
+    }
+
+    .nav_accomodation_activities {
+        justify-content: center;
+        margin-right: auto;
+        width: 100%;
+        order: 3;
     }
 
     nav li {
@@ -580,13 +582,6 @@ footer div ul li a:hover {
         color: var(--clr-primary-500);
     }
 
-    /*.logo, 
-    .nav_accomodation, 
-    .nav_activities,
-    .nav_registration {
-        display: flex;
-    }*/
-
     .logo {
         margin-right: 10.5rem;
     }
@@ -607,20 +602,15 @@ footer div ul li a:hover {
         display: flex;
         flex-wrap: wrap;
     }
-    
-    .nav_accomodation_activities {
-        display: flex;
-        flex-direction: row-reverse;
-    }
 
-    .nav_accomodation_activities:nth-child(1) {
+    /*.nav_accomodation_activities:nth-child(1) {
         order: 2;
         flex-direction: flex-start;
     }
     .nav_registration:nth-child(2) {
         order : 1;
         flex-direction: flex-end;
-    }
+    } ne fonctionne pas*/
 
 
     .filter_buttons {
@@ -632,14 +622,12 @@ footer div ul li a:hover {
         flex-direction: column-reverse;
     }
 
-    .accomodation {
-        width: auto;
-        margin: 1.5rem 1.5rem;
-    }
-
-    .popular {
-        width: auto;
-        margin: 1.5rem 1.5rem;
+    .accomodation,
+    .popular,
+    .activities {
+        width: 90%;
+        margin-bottom: 1rem;
+        justify-content: center;
     }
     
     .accomodation .cards1 {
@@ -648,16 +636,28 @@ footer div ul li a:hover {
     }
 
     .accomodation .cards1 .element {
-        width: auto;
+        width: 80%;
         height: auto;
-        margin: 1.5rem 1.5rem;
+        margin: 0.8rem 0.5rem;
     }
 
     .accomodation .cards1 .element_image1 {
-        width: 18rem;
+        width: 100%;
         height: auto;
     }
 
+    .accomodation .cards1 .element_image1 .image_amina {
+        margin: -17rem 0rem 0rem 0rem;
+    } /*ne prend pas la valeur donnée*/
+
+    .popular_intro {
+        display: flex;
+        padding-right: 0;
+    }
+
+    .popular_intro h2 {
+        margin-right: 0.29rem;
+    }
     .popular .cards2 {
         width: auto;
         height: auto;
@@ -737,9 +737,9 @@ footer div ul li a:hover {
 }
 
 
-
+/*------------------------------------------*/
 /*Design adaptatif pour tablettes*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 415px) and (max-width: 768px) {
     body {
         font-size: 1rem;
         line-height: 1rem;
