@@ -56,7 +56,7 @@ section {
     padding: 1rem 0;
 }
 
-/*Dimensions des principales sections de la page*/
+/*Dimensions des principales div de la page*/
 header, 
 .search, 
 .accomodation_popular, 
@@ -86,6 +86,11 @@ nav {
     margin-left: auto;
     display: flex;
     margin-right: 1rem;
+    margin-bottom: -1rem;
+}
+
+.nav_registration {
+    margin-bottom: -1rem;
 }
 
 .nav_accomodation {
@@ -93,8 +98,8 @@ nav {
 }
 
 nav a {
-    font-size: 1rem;
-    color: var(--clr-neutral-900);
+    font-size: 1em;
+    color: var(--clr-neutral-500);
     text-decoration: none;
 }
 
@@ -103,13 +108,14 @@ nav a {
     font-weight: 700;
 }
 
-nav li a:hover {
+.nav_accomodation_activities a:hover,
+.nav_registration a:hover {
     color: var(--clr-primary-500); 
     border-top: 0.2rem solid;
     padding-top: 1rem;
 }
 
-/*Section "search"*/
+/*Div "search"*/
 
 /*rubrique recherche*/
 .fa-map-marker {
@@ -224,7 +230,7 @@ nav li a:hover {
 
 
 
-/*Section "accomodation_popular"*/
+/*Div "accomodation_popular"*/
 .fa-star {
     color: var(--clr-primary-500);
 }
@@ -296,6 +302,7 @@ nav li a:hover {
     height: 60%;
     overflow: hidden;
     justify-content: center; /*ajout*/
+    display: flex;
     margin: 0;
     border-top-left-radius: 0.938rem;
     border-top-right-radius: 0.938rem;
@@ -336,6 +343,7 @@ nav li a:hover {
     height: auto; /*changé : 100%-> auto*/
     overflow: hidden;
     justify-content: center; /*ajout*/
+    display: flex;
     border-top-left-radius: 0.938rem;
     border-bottom-left-radius: 0.938rem;
 } 
@@ -377,13 +385,13 @@ nav li a:hover {
     margin: 0 0 1rem 0;
 }
 
-/*Section "Activités"*/
+/*Div "Activités"*/
 
 /*style commun*/
 
 .activities {
-    height: 30rem;
-    margin: 1.5rem auto auto auto;
+    height: auto;
+    margin: 2rem auto 2rem auto;
     padding: 0;
 }
 
@@ -431,11 +439,11 @@ nav li a:hover {
 }
 
 
-/*style spécifique aux images de la section "activités"*/
+/*style spécifique aux images de la div "activités"*/
 
-.element_image3 {
+/*.element_image3 {
     height: 18.75rem;
-}
+}*/
 .element_image3 .cropped {
     width: 166%;
     height: auto;
@@ -496,7 +504,6 @@ footer {
     display: flex;
     background-color: #F2F2F2;
     justify-content: flex-start;
-    padding: 0 6.8rem 1.8rem 1rem;
 }
 
 footer div {
@@ -531,11 +538,12 @@ footer div ul li a:hover {
 
 /*------------------------------------------*/
 /*Design adaptatif pour smartphones*/
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 360px) and (max-width: 600px) {
     body {
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 1rem;
     }
+
     header, 
     section {
         padding: 0.5rem 0;
@@ -545,23 +553,36 @@ footer div ul li a:hover {
         display: flex;
     }
 
+    /*Affichage spécifique pour la barre de navigation*/
     nav {
         flex-wrap: wrap;
     }
 
     .nav_registration {
         margin-left: auto;
+        margin-bottom: -1rem;
         order: 2;
     }
 
     .nav_accomodation_activities {
         justify-content: center;
+        display: flex;
         margin-right: auto;
         width: 100%;
         order: 3;
+        margin: 1.2rem auto 1rem 10rem;
     }
 
-    nav li {
+    .nav_accomodation {
+        margin-right: 1rem;
+        margin-left: -9.2rem;
+    }
+
+    .nav_activities {
+        margin-left: 2rem;
+    }
+
+    nav {
         width: auto;
         margin: 0 0.5em 0 0.5rem;
         display: flex;
@@ -569,13 +590,17 @@ footer div ul li a:hover {
         margin-left: 0;
     }
 
-    nav li a {
+    .nav_accomodation a,
+    .nav_activities a,
+    .nav_registration a {
         text-decoration: none;
         padding-bottom: 0.3rem;
         color: var(--clr-neutral-900);
     }
 
-    nav li a:hover {
+    .nav_accomodation a:hover,
+    .nav_activities a:hover,
+    .nav_registration a:hover {
         border-top: none;
         padding-top: 0;
         border-bottom: 0.2rem solid;
@@ -584,10 +609,6 @@ footer div ul li a:hover {
 
     .logo {
         margin-right: 10.5rem;
-    }
-    
-    .nav_registration {
-        margin-right: 1rem;
     }
 
     .logo,
@@ -603,42 +624,48 @@ footer div ul li a:hover {
         flex-wrap: wrap;
     }
 
-    /*.nav_accomodation_activities:nth-child(1) {
-        order: 2;
-        flex-direction: flex-start;
-    }
-    .nav_registration:nth-child(2) {
-        order : 1;
-        flex-direction: flex-end;
-    } ne fonctionne pas*/
+    .nav_registration {
+        color: var(--clr-primary-500);
+        font-weight: 700;
+    } /*couleur non prise en compte*/
 
-
+    /*Div "search" - rubrique filtres*/
     .filter_buttons {
         flex-wrap: wrap;
     }
 
+    /*Affichage des autres div*/
     .accomodation_popular {
         width: auto;
+        display: flex;
         flex-direction: column-reverse;
+        flex-wrap: wrap;
     }
 
     .accomodation,
     .popular,
     .activities {
-        width: 90%;
-        margin-bottom: 1rem;
-        justify-content: center;
+        width: 85%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto auto 2rem auto;
     }
     
-    .accomodation .cards1 {
-        width: auto;
+    .accomodation .cards1,
+    .popular .cards2 {
+        width: 100%;
+        display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .accomodation .cards1 .element {
-        width: 80%;
+        width: 100%;
         height: auto;
         margin: 0.8rem 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .accomodation .cards1 .element_image1 {
@@ -646,28 +673,19 @@ footer div ul li a:hover {
         height: auto;
     }
 
-    .accomodation .cards1 .element_image1 .image_amina {
-        margin: -17rem 0rem 0rem 0rem;
-    } /*ne prend pas la valeur donnée*/
-
     .popular_intro {
         display: flex;
         padding-right: 0;
     }
 
     .popular_intro h2 {
-        margin-right: 0.29rem;
-    }
-    .popular .cards2 {
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        justify-content: center; /*sélecteur inactif*/
+        margin-right: 10rem;
     }
 
     .popular .cards2 .element {
-        width: 18rem;
+        width: 100%;
         height: auto;
+        display: flex;
     }
 
     .cards1 .element .element_image1 .image_amina {
@@ -683,20 +701,25 @@ footer div ul li a:hover {
     }
 
     .activities {
-        width: auto;
         height: auto;
         flex-direction: column;
     }
 
+    .activities .cards1 {
+        width: 100%;
+    }
+
     .activities .cards1 .element {
-        width: 20rem;
+        width: 100%;
         height: auto;
         flex-direction: column;
         justify-content: center;
         margin: 1.5rem 1.5rem;
+        display: flex;
     }
+
     .activities .cards1 .two_elements_in_column {
-        width: 20rem;
+        width: 88%;
         height: auto;
         margin: 0rem 0.5rem;
     }
@@ -706,6 +729,7 @@ footer div ul li a:hover {
         height: auto;
         justify-content: center;
         margin-bottom: 1.5rem;
+        display: flex;
     }
 
     .element_image3,
@@ -723,6 +747,7 @@ footer div ul li a:hover {
         margin: -9.813rem 0 0 -0.313rem;
     }
 
+    /*Footer*/
     footer {
         width: 90%;
         height: auto;
@@ -739,9 +764,10 @@ footer div ul li a:hover {
 
 /*------------------------------------------*/
 /*Design adaptatif pour tablettes*/
-@media screen and (min-width: 415px) and (max-width: 768px) {
+/*@media screen and (min-width: 600px) and (max-width: 768px), (min-width:769px) and (max-width:1053px) {*/
+@media screen and (min-width: 601px) and (max-width: 800px) {
     body {
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 1rem;
     }
     header, 
@@ -761,7 +787,10 @@ footer div ul li a:hover {
     .accomodation {
         width: 100%;
         margin-bottom: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
     }
+
     .popular {
         width: 100%;
         display: flex;
@@ -792,6 +821,7 @@ footer div ul li a:hover {
         justify-content: center;
         margin: 0;
         border-radius: 0.938rem 0.938rem 0 0;
+        display: flex;
     }
 
     .popular .cards2 .element .element_image2 .cropped {
@@ -810,7 +840,7 @@ footer div ul li a:hover {
         height: auto;
     }
 
-    .accomodation .cards1 .element_image1 {
+    .accomodation .cards1 .element .element_image1 {
         width: 100%;
         height: 50%;
     }
@@ -822,22 +852,24 @@ footer div ul li a:hover {
     }
 
     .activities .cards1 .element,
-    .activities .cards1 .two_elements_in_column {
-        width: 45%;
+    .activities .cards1 .two_elements_in_column,
+    .accomodation .cards1 .element {
+        width: 40%;
     }
 
-    .activities .cards1 .element:nth-child(1) {
-        order: 1;
+    .popular .cards2 .element {
+        width: 90%;
+        
     }
-    .activities .cards1 .two_elements_in_column:nth-child(1){
-        order: 2;
+
+    .cards1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: space-around;
     }
-    .activities .cards1 .two_elements_in_column:nth-child(2) {
-        order: 3;
-    }
-    .activities .cards1 .element:nth-child(2) {
-        order: 4;
-    } /*changement dans l'ordre des colonnes : inactif*/
 
     .element_image3 .cropped{
         margin: -0.875rem 0 0 -6.313rem;
@@ -856,6 +888,143 @@ footer div ul li a:hover {
     }
 
     footer {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*------------------------------------------*/
+/*Design adaptatif pour petit desktop*/
+@media screen and (min-width: 801px) and (max-width: 1150px) {
+    /*Div "search" - rubrique filtres*/
+    .filter_buttons {
+        flex-wrap: wrap;
+    }
+    
+    /*Div "Accomodation"*/
+    .accomodation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accomodation h2,
+    .accomodation .cards1,
+    .accomodation .afficher_plus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accomodation .cards1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .accomodation .cards1 .element {
+        width: 45%;
+    }
+
+    /*Div "Popular"*/
+    .popular {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular_intro, 
+    .popular .cards2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .popular .cards2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem auto 2rem auto;
+    }
+
+    /*Div "Activities"*/
+    .activities {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activities h2,
+    .activities .cards1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activities .cards1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .activities .cards1 .element {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+
+    footer {
+
+    }
+}
+
+/*------------------------------------------*/
+/*Design adaptatif pour grand desktop*/
+@media screen and (min-width: 1500px) {
+    /*Div "search" - rubrique filtres*/
+    .filter_buttons {
+        flex-wrap: wrap;
+    }
+    
+    /*Div "Accomodation"*/
+    .accomodation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accomodation h2,
+    .accomodation .cards1,
+    .accomodation .afficher_plus {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accomodation .cards1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .accomodation .cards1 .element {
+        width: 25%;
+    }
+
+    /*Div "Popular"*/
+    .popular {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular_intro, 
+    .popular .cards2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular .cards2 {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        margin: 1rem auto 2rem auto;
+    }
+
+    .popular .cards2 .element {
         width: 100%;
         height: auto;
     }
