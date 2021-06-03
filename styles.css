@@ -46,17 +46,12 @@ span {
     line-height: 1;
 }
 
-/*img {
-    overflow: hidden;
-    max-width: 100%;
-}*/ /*règles à revoir*/
-
 header, 
 section {
     padding: 1rem 0;
 }
 
-/*Dimensions des principales div de la page*/
+/*Dimensions des principales divisions de la page*/
 header, 
 .search, 
 .accomodation_popular, 
@@ -115,7 +110,7 @@ nav a {
     padding-top: 1rem;
 }
 
-/*Div "search"*/
+/*Div "Search"*/
 
 /*rubrique recherche*/
 .fa-map-marker {
@@ -159,6 +154,7 @@ nav a {
     box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem var(--clr-neutral-200);
     transform: scale(1.03);
 }
+
 .search_button button[type="submit"] a {
     text-decoration: none;
     color: var(--clr-neutral-100);
@@ -229,28 +225,9 @@ nav a {
 }
 
 
-
-/*Div "accomodation_popular"*/
-.fa-star {
-    color: var(--clr-primary-500);
-}
-
+/*Div "Accomodation_Popular"*/
 .accomodation_popular {
     display: flex;
-}
-
-.accomodation_popular .element {
-    border: 0.188rem solid var(--clr-neutral-100);  
-    border-radius: 0.938rem;
-    background-color: var(--clr-neutral-100);
-}
-
-.accomodation, 
-.popular {
-    margin: 0 0.625rem 0 0;
-    padding: 0.625rem 1.125rem;
-    background-color: var(--clr-neutral-200);
-    border-radius: 0.938rem;
 }
 
 .accomodation {
@@ -261,6 +238,20 @@ nav a {
     width: 30%;
 }
 
+.accomodation, 
+.popular {
+    margin: 0 0.625rem 0 0;
+    padding: 0.625rem 1.125rem;
+    border-radius: 0.938rem;
+    background-color: var(--clr-neutral-200);
+}
+
+.accomodation_popular .element {
+    border: 0.188rem solid var(--clr-neutral-100);  
+    border-radius: 0.938rem;
+    background-color: var(--clr-neutral-100);
+}
+
 .popular_intro {
     display: flex;
     align-items: baseline;
@@ -269,11 +260,11 @@ nav a {
 
 .cards1 {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     align-content: space-around;
+    flex-wrap: wrap;
 }
 
 .cards2 {
@@ -291,196 +282,132 @@ nav a {
     transform: scale(1.02);
 }
 
-.accomodation .cards1 .element {
-    width: 30%;
-    margin: 0 0.313rem 1.938rem 0.313rem;
-    height: 14rem;
-}
-
-.accomodation .cards1 .element .element_image1 {
-    width: 100%;
-    height: 60%;
-    overflow: hidden;
-    justify-content: center; /*ajout*/
-    display: flex;
-    margin: 0;
-    border-top-left-radius: 0.938rem;
-    border-top-right-radius: 0.938rem;
-}
-
-.accomodation .cards1 .element .element_image1 .cropped {
-    width: 100%;
-    height: auto; /*ajouté*/
-    margin: -1.313rem 0 0 0;
-} /*Auberge de la Cannebière, Hôtel du port, Hôtel Les mouettes*/
-
-.accomodation .cards1 .element .element_image1 .image_mer {
-    margin: -3.938rem 0 0 0;
-} /*Hôtel de la mer*/
-
-.accomodation .cards1 .element .element_image1 .image_panier {
-    margin: 0 0 0 0;
-} /*Auberge Le Panier*/
-
-.accomodation .cards1 .element .element_image1 .image_amina {
-    margin: -8.188rem 0 0 0;
-} /*Hôtel Amina*/
-
-.popular .cards2 .element {
-    display: flex;
-    margin: 0 0.313rem 1.938rem 0.03rem;
-    height: 8.875rem;
-    width: 100%;
-}
-
-.popular .cards2 .element .element_description {
-    width: 60%;
-    height: auto; /*changé : 100%-> auto*/
-}
-
-.popular .cards2 .element .element_image2 {
-    width: 60%;
-    height: auto; /*changé : 100%-> auto*/
-    overflow: hidden;
-    justify-content: center; /*ajout*/
-    display: flex;
-    border-top-left-radius: 0.938rem;
-    border-bottom-left-radius: 0.938rem;
-} 
-
-.popular .cards2 .element .element_image2 .cropped {
-    border-top-left-radius: 0.938rem;
-    border-bottom-left-radius: 0.938rem;
-    width: 150%;
-    height: auto; /*ajouté*/
-    margin: 0 0 0 -1.875rem;
-} /*Hôtel Le soleil du matin, Chambres d'hôtes*/
-
-.popular .cards2 .element .element_image2 .bleu_blanc {
-    width: 110%;
-    margin: -3.438rem 0 0 -0.563rem;
-} /*Hôtel Tout bleu et blanc*/
-
-.accomodation .element_description {
-    line-height: 0.3;
-    margin: 0.5em 0.5em;
-}
-
-.popular .element_description {
-    line-height: 1;
-    margin: 0.5em 0.5em;
-}
-
-.activities .element_description {
-    padding: 0 0.313rem;
-    line-height: 1.5;
-    margin: 0.5rem 0.5rem;
-}
-
 .title {
     font-weight: 700; /*bold*/
+}
+
+.fa-star {
+    color: var(--clr-primary-500);
 }
 
 .afficher_plus {
     margin: 0 0 1rem 0;
 }
 
-/*Div "Activités"*/
+/*Div "Accomodation": détails sur les cartes*/
+.accomodation .cards1 .element {
+    height: 14rem;
+    width: 30%;
+    margin: 0 0.313rem 1.938rem 0.313rem;  
+}
 
-/*style commun*/
+.accomodation .cards1 .element img {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-top-left-radius: 0.938rem;
+    border-top-right-radius: 0.938rem;
+}
 
+.accomodation .cards1 .element .description {
+    height: 40%;
+    line-height: 0.3;
+    margin: 0.5em 0.5em;
+}
+
+/*Div "Popular" : détails sur les cartes*/
+.popular .cards2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular .cards2 .image_and_description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popular .cards2 .element {
+    height: 9rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.popular .cards2 .element img {
+    height: 9rem;
+    width: 40%;
+    object-fit: cover;
+    border-top-left-radius: 0.938rem;
+    border-bottom-left-radius: 0.938rem;
+}
+
+.popular .cards2 .element .description {
+    height: 9rem;
+    width: 60%;
+    line-height: 1;
+    margin: 0.5em 0.5em;
+}
+
+/*Div "Activities"*/
 .activities {
-    height: auto;
     margin: 2rem auto 2rem auto;
-    padding: 0;
 }
 
 .activities .cards1 {
     display: flex;
 }
 
-.activities .cards1 .element {
-    width: 25%;
-    border-radius: 0.938rem;
-}
-
-.activities .cards1 .element .element_description {
-    width: 100%;
-    height: 2.5rem;
-}
-
 .activities .cards1 .two_elements_in_column {
-    width: 20%;
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    margin: 0 0 0.625rem 0;
 }
+
+.activities .cards1 .two_elements_in_column,
+.activities .cards1 .element {
+    width: 23%;
+}
+
+.activities .cards1 .element,
+.activities .cards1 .two_elements_in_column .element {
+    border-radius: 0.938rem;
+}
+
 .activities .cards1 .two_elements_in_column .element {
     width: 100%;
-    height: auto; /*changé: 100%-> auto*/
-    margin: auto auto 1.7em auto;
-}
+    height: auto;
+    margin: auto auto 1.7rem auto;
+} /*code à revoir*/
 
-.activities .cards1 .two_elements_in_column .element .element_description {
+.activities .description {
     width: 100%;
+    height: 2.5rem;
     align-content: space-around;
+    padding: 0 0.313rem;
+    line-height: 1.5;
+    margin: 0.5rem 0.5rem;
 }
 
-.activities .cards1 .element_description .p {
+.activities p {
     line-height: 1.8;
 }
 
-.element_image3, .element_image4, .element_image5, .element_image6 {
+.big_image,
+.medium_image {
     width: 100%;
-    overflow: hidden;
+    object-fit: cover;
     border-top-left-radius: 0.938rem;
     border-top-right-radius: 0.938rem;
 }
 
-
-/*style spécifique aux images de la div "activités"*/
-
-/*.element_image3 {
-    height: 18.75rem;
-}*/
-.element_image3 .cropped {
-    width: 166%;
-    height: auto;
-    overflow: hidden;
-    margin: -0.875rem 0 0 -8.313rem;
-} /*Vieux Port, Parc National des Calanques*/
-
-.element_image4 {
-    height: 7.75rem;
+.big_image {
+    height: 21.5rem;
 }
-.element_image4 .cropped {
-    width: 103%;
-    height: auto;
-    overflow: hidden;
-    margin: -5.813rem 0 0 -0.313rem;
-} /* Fort de Pomègues*/
 
-.element_image5 {
-    height: 5.625rem;
+.medium_image {
+    height: 8rem;
 }
-.element_image5 .cropped {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin: 0 0 0 0;
-} /*Îles du Frioul*/
-
-.element_image6 {
-    height: 6.7rem;
-}
-.element_image6 .cropped {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin: -0.688rem 0 0 0;
-} /* Notre-Dame-de-la-Garde, Parc Longchamp*/ 
-
 
 /*hyperliens et survols*/
 .cards1 a, 
@@ -496,11 +423,11 @@ nav a {
     text-decoration: none;
 }
 
+
 /*Footer*/
 
 footer {
-    width: 90%;
-    height: 10.75rem;
+    height: 11rem;
     display: flex;
     background-color: #F2F2F2;
     justify-content: flex-start;
@@ -591,8 +518,7 @@ footer div ul li a:hover {
     }
 
     .nav_accomodation a,
-    .nav_activities a,
-    .nav_registration a {
+    .nav_activities a {
         text-decoration: none;
         padding-bottom: 0.3rem;
         color: var(--clr-neutral-900);
@@ -668,14 +594,9 @@ footer div ul li a:hover {
         flex-wrap: wrap;
     }
 
-    .accomodation .cards1 .element_image1 {
-        width: 100%;
-        height: auto;
-    }
-
     .popular_intro {
         display: flex;
-        padding-right: 0;
+        padding-right: 0; /*vérifier si nécessaire*/
     }
 
     .popular_intro h2 {
@@ -687,17 +608,9 @@ footer div ul li a:hover {
         height: auto;
         display: flex;
     }
-
-    .cards1 .element .element_image1 .image_amina {
-        margin: -14.188rem 0 0 0px;
-    }
-
-    .cards1 .element .element_image1 .image_mer {
-        margin: -5.938rem 0 0 0;
-    }
     
     #activities {
-        padding: 0 0 0 2rem;
+        padding: 0 0 0 2rem; /*remplacer par margin ?*/
     }
 
     .activities {
@@ -707,15 +620,17 @@ footer div ul li a:hover {
 
     .activities .cards1 {
         width: 100%;
+        display: flex;
     }
 
     .activities .cards1 .element {
         width: 100%;
         height: auto;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 1.5rem 1.5rem;
-        display: flex;
+
     }
 
     .activities .cards1 .two_elements_in_column {
@@ -732,20 +647,14 @@ footer div ul li a:hover {
         display: flex;
     }
 
-    .element_image3,
-    .element_image4,
-    .element_image5,
-    .element_image6 {
-        height: 9.75rem;
+    .big_image {
+        height: 10rem;
+    }
+    .medium_image {
+        height: 4.5rem;
+        margin: 0.25rem 0 0.25rem 0;
     }
 
-    .element_image3 .cropped {
-        margin: -5.875rem 0 0 -8.313rem;
-    }
-
-    .element_image4 .cropped {
-        margin: -9.813rem 0 0 -0.313rem;
-    }
 
     /*Footer*/
     footer {
