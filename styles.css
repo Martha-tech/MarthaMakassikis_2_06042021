@@ -823,7 +823,7 @@ footer div ul li a:hover {
 
     .popular_intro h2 {
         display: flex;
-        align-items: space-between;
+        justify-content: space-between;
         margin-right: 2rem;
     } /*ajout*/
 
@@ -921,7 +921,7 @@ footer div ul li a:hover {
 
     .popular_intro h2 {
         display: flex;
-        align-items: space-between;
+        justify-content: space-between;
         margin-right: 2rem;
     } /*ajout*/
 
