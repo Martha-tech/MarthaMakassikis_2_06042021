@@ -720,23 +720,32 @@ footer div ul li a:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: space-around;
         margin: auto;
     }
 
+    .popular .cards2 .image_and_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
     .popular .cards2 .element {
-        width: 70%;
-        height: 80%;
+        width: 45%;
+        height: 60%;
+        margin: 0.4rem 0.4rem;
     }
 
     .popular .cards2 .element img {
-        width: 40%;
+        width: 100%;
         object-fit: cover;
-        border-radius: 0.938rem 0 0 0.938rem;
+        border-radius: 0.935rem 0.935rem 0 0;
     }
 
     .popular .cards2 .element .description {
-        width: 60%;
+        width: 100%;
     }
 
     .activities {
@@ -909,7 +918,7 @@ footer div ul li a:hover {
         width: 100%;
         height: auto;
     }
-    
+
     .popular_intro h2 {
         display: flex;
         align-items: space-between;
