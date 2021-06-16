@@ -53,8 +53,6 @@ header,
 footer {
     width: 90%;
     margin: auto;
-    /*background: grey;
-    border : 0.2rem solid black;*/ /*pour visualiser les boîtes*/
 }
 
 /*Header*/
@@ -124,7 +122,7 @@ nav a {
 }
 
 .search_button input[type="text"] {
-    border: 0.0018rem solid #F2F2F2;
+    border: 0.0018rem solid var(--clr-neutral-200);
     padding: 0.6557rem;
 }
 
@@ -331,7 +329,6 @@ nav a {
 }
 
 .popular .cards2 .element {
-    /*height: 8rem;*/
     width: 100%;
     margin-bottom: 2rem;
 }
@@ -379,7 +376,7 @@ nav a {
     width: 100%;
     height: auto;
     margin: auto auto 1.7rem auto;
-} /*code à revoir*/
+}
 
 .activities .description {
     width: 100%;
@@ -609,11 +606,11 @@ footer div ul li a:hover {
 
     .popular_intro h2 {
         margin-right: 10%;
-    } /*ajout*/
+    }
 
     .fas fa-chart-line {
         margin-left: 0;
-    } /*ajout*/
+    }
 
     .popular .cards2 .element {
         max-height: 30%;
@@ -825,11 +822,11 @@ footer div ul li a:hover {
         display: flex;
         justify-content: space-between;
         margin-right: 2rem;
-    } /*ajout*/
+    }
 
     .fas fa-chart-line {
         margin-left: 0;
-    } /*ajout*/
+    }
 
     /*Div "Activities"*/
     .activities {
@@ -854,6 +851,7 @@ footer div ul li a:hover {
         width: 23%;
         margin-bottom: 2rem;
     }
+
     .activities .cards1 .two_elements_in_column {
         width: 23%;
     }
@@ -923,11 +921,11 @@ footer div ul li a:hover {
         display: flex;
         justify-content: space-between;
         margin-right: 2rem;
-    } /*ajout*/
+    }
 
     .fas fa-chart-line {
         margin-left: 0;
-    } /*ajout*/
+    }
 
     /*Div "Activities"*/
     .activities .cards1 .element,
