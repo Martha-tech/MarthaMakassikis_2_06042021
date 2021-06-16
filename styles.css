@@ -234,6 +234,7 @@ nav a {
 
 .popular {
     width: 30%;
+    align-items: center;
 }
 
 .accomodation, 
@@ -336,7 +337,7 @@ nav a {
 }
 
 .popular .cards2 .element img {
-    height: 8rem;
+    height: 9rem;
     width: 40%;
     object-fit: cover;
     border-top-left-radius: 0.938rem;
@@ -803,12 +804,6 @@ footer div ul li a:hover {
         margin-right: auto;
     }
 
-    .popular_intro, 
-    .popular .cards2 {
-        display: flex;
-        flex-direction: row;
-    }
-
     .popular .cards2 {
         display: flex;
         flex-direction: column;
@@ -816,6 +811,16 @@ footer div ul li a:hover {
         width: 90%;
         margin: 1rem auto 2rem auto;
     }
+
+    .popular_intro h2 {
+        display: flex;
+        align-items: space-between;
+        margin-right: 2rem;
+    } /*ajout*/
+
+    .fas fa-chart-line {
+        margin-left: 0;
+    } /*ajout*/
 
     /*Div "Activities"*/
     .activities {
@@ -904,6 +909,16 @@ footer div ul li a:hover {
         width: 100%;
         height: auto;
     }
+    
+    .popular_intro h2 {
+        display: flex;
+        align-items: space-between;
+        margin-right: 2rem;
+    } /*ajout*/
+
+    .fas fa-chart-line {
+        margin-left: 0;
+    } /*ajout*/
 
     /*Div "Activities"*/
     .activities .cards1 .element,
