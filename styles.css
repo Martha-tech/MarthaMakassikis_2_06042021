@@ -32,7 +32,7 @@ header {
     padding: 1rem 0;
 }
 
-/*Dimensions des principales divisions de la page*/
+/*Dimensions des principales composantes de la page*/
 header, 
 .search, 
 .accomodation_popular, 
@@ -57,8 +57,8 @@ nav {
 }
 
 .nav_accomodation_activities {
-    margin-left: auto;
     display: flex;
+    margin-left: auto;
     margin-right: 1rem;
     margin-bottom: -1rem;
 }
@@ -89,7 +89,7 @@ nav a {
     padding-top: 1rem;
 }
 
-/*Div "Search"*/
+/*Section "Search"*/
 
 /*rubrique recherche*/
 .fa-map-marker {
@@ -208,7 +208,7 @@ nav a {
 }
 
 
-/*Div "Accomodation_Popular"*/
+/*Section "Accomodation_Popular"*/
 .accomodation_popular {
     display: flex;
 }
@@ -335,7 +335,7 @@ nav a {
     padding: 0.5rem 0.5rem 0.5rem 0.7rem;
 }
 
-/*Div "Activities"*/
+/*Section "Activities"*/
 .activities {
     margin: 2rem auto 2rem auto;
 }
@@ -467,7 +467,11 @@ footer div ul li a:hover {
 
     /*Affichage spécifique pour la barre de navigation*/
     nav {
+        display: flex;
         flex-wrap: wrap;
+        width: auto;
+        margin: 0 0.5em 0 0.5rem;
+        /*margin-left: 0;*/
     }
 
     .nav_registration {
@@ -492,13 +496,6 @@ footer div ul li a:hover {
 
     .nav_activities {
         margin-left: 2rem;
-    }
-
-    nav {
-        width: auto;
-        margin: 0 0.5em 0 0.5rem;
-        display: flex;
-        margin-left: 0;
     }
 
     .nav_accomodation a,
@@ -539,12 +536,12 @@ footer div ul li a:hover {
         font-weight: 700;
     }
 
-    /*Div "Search" - Rubrique Filtres*/
+    /*Section "Search" - Rubrique Filtres*/
     .filter_buttons {
         flex-wrap: wrap;
     }
 
-    /*Affichage des autres div*/
+    /*Affichage des autres sections et div*/
     .accomodation_popular {
         width: auto;
         display: flex;
@@ -761,7 +758,7 @@ footer div ul li a:hover {
 /*------------------------------------------*/
 /*Design adaptatif pour petit desktop*/
 @media screen and (min-width: 1001px) and (max-width: 1450px) {
-    /*Div "search" - rubrique filtres*/
+    /*Section "Search" - rubrique filtres*/
     .filter_buttons {
         flex-wrap: wrap;
     }
@@ -815,7 +812,7 @@ footer div ul li a:hover {
         margin-left: 0;
     }
 
-    /*Div "Activities"*/
+    /*Section "Activities"*/
     .activities {
         display: flex;
         flex-direction: column;
@@ -847,7 +844,7 @@ footer div ul li a:hover {
 /*------------------------------------------*/
 /*Design adaptatif pour grand desktop*/
 @media screen and (min-width: 1700px) {
-    /*Div "search" - rubrique filtres*/
+    /*Section "Search" - rubrique filtres*/
     .filter_buttons {
         flex-wrap: wrap;
     }
@@ -914,7 +911,7 @@ footer div ul li a:hover {
         margin-left: 0;
     }
 
-    /*Div "Activities"*/
+    /*Section "Activities"*/
     .activities .cards1 .element,
     .activities .cards1 .two_elements_in_column {
         width: 22%;
