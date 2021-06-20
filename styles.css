@@ -121,7 +121,7 @@ nav a {
     border: 0.0018rem solid #0065fc;
     background-color:#0065fc;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 700;
     padding: 0.6557rem;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
@@ -204,7 +204,7 @@ nav a {
     height: 1.3rem;
     border-radius: 1rem;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 
@@ -225,7 +225,7 @@ nav a {
 .accomodation, 
 .popular {
     margin: 0 2rem 0 0;
-    padding: 0.625rem 1.125rem;
+    padding: 0rem 1.5rem;
     border-radius: 0.938rem;
     background-color: #f2f2f2;
 }
@@ -240,6 +240,7 @@ nav a {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    width: 100%;
 }
 
 .cards1 {
@@ -305,7 +306,7 @@ nav a {
 .popular .cards2 {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     align-items: center;
 }
 
@@ -329,10 +330,10 @@ nav a {
 }
 
 .popular .cards2 .element .description {
-    height: 8rem;
     width: 60%;
+    height: 7rem;
     line-height: 1;
-    padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+    padding: 0.5rem 0.5rem;
 }
 
 /*Section "Activities"*/
@@ -427,7 +428,7 @@ footer div ul {
 }
 
 .footer_title {
-    font-weight: bold;
+    font-weight: 700;
     line-height: 2.8;
 }
 
@@ -471,7 +472,6 @@ footer div ul li a:hover {
         flex-wrap: wrap;
         width: auto;
         margin: 0 0.5em 0 0.5rem;
-        /*margin-left: 0;*/
     }
 
     .nav_registration {
@@ -515,7 +515,7 @@ footer div ul li a:hover {
     }
 
     .logo {
-        margin-right: 10.5rem;
+        margin-right: 9.5rem;
     }
 
     .logo,
@@ -568,7 +568,7 @@ footer div ul li a:hover {
     .popular .cards2 {
         width: 90%;
         align-items: center;
-        margin: 0.5rem 1.5rem 2rem 1.5rem;
+        margin: auto;
     }
 
     .accomodation .cards1 .element {
@@ -715,8 +715,7 @@ footer div ul li a:hover {
 
     .popular .cards2 .element {
         width: 45%;
-        height: 60%;
-        margin: 0.4rem 0.4rem;
+        margin: 1rem 0.5rem;
     }
 
     .popular .cards2 .element img {
