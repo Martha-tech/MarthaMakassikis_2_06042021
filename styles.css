@@ -20,7 +20,7 @@ p {
 h2 {
     color: #000000;
     font-family: "Raleway", sans-serif;
-    font-weight: 800; /*bold*/
+    font-weight: 700; /*bold*/
     line-height: 1;
 }
 
@@ -79,7 +79,7 @@ nav a {
 
 .sinscrire {
     color: #0065fc;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .nav_accomodation_activities a:hover,
@@ -114,14 +114,14 @@ nav a {
 }
 
 .search_button input[value="Marseille, France"] {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .search_button button[type="submit"] {
     border: 0.0018rem solid #0065fc;
     background-color:#0065fc;
     color: #ffffff;
-    font-weight: 800;
+    font-weight: 700;
     padding: 0.6557rem;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
@@ -270,7 +270,7 @@ nav a {
 }
 
 .title {
-    font-weight: 800; /*bold*/
+    font-weight: 700; /*bold*/
 }
 
 .fa-star {
@@ -430,7 +430,7 @@ footer div ul li {
 }
 
 .footer_title {
-    font-weight: 800;
+    font-weight: 700;
     line-height: 2.8;
 }
 
@@ -535,7 +535,7 @@ footer div ul li a:hover {
 
     .nav_registration {
         color: #0065fc;
-        font-weight: 800;
+        font-weight: 700;
     }
 
     /*Section "Search" - Rubrique Filtres*/
